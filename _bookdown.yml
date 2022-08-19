@@ -2,6 +2,9 @@ delete_merged_file: true
 output_dir: "docs"
 language:
   ui:
-    chapter_name: "Chapter "
+    chapter_name: "Capítulo "
 rmd_files: ["index.Rmd",
-            "cap/01-intro.Rmd"]
+            "cap/Rmarkdown/01-intro.Rmd",
+            "cap/Rmarkdown/02-grafico-dispersion.Rmd",
+            "cap/Rmarkdown/03-grafico-de-barras.Rmd",
+            "cap/Rmarkdown/04-grafico-de-lineas.Rmd"]

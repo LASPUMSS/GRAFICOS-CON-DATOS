@@ -1,1 +1,7 @@
 introducción
+grafico-de-disperción
+librerias-necesarias
+grafico-de-dispercion-con-r
+grafico-de-disperción-con-python
+grafico-de-barras
+grafico-de-lineas
