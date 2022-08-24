@@ -11,3 +11,11 @@ grafico-de-lineas
 librerias-necesarias-2
 grafico-de-lineas-en-r
 grafico-de-lineas-en-python
+histograma
+librerias-necesarias-3
+histograma-en-r
+hisograma-en-python
+grafico-de-caja
+librerias-necesarias-4
+grafico-de-caja-en-r
+grafico-de-caja-en-python

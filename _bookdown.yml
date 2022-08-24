@@ -7,4 +7,6 @@ rmd_files: ["index.Rmd",
             "cap/Rmarkdown/01-intro.Rmd",
             "cap/Rmarkdown/02-grafico-dispersion.Rmd",
             "cap/Rmarkdown/03-grafico-de-barras.Rmd",
-            "cap/Rmarkdown/04-grafico-de-lineas.Rmd"]
+            "cap/Rmarkdown/04-grafico-de-lineas.Rmd",
+            "cap/Rmarkdown/05-histograma.Rmd",
+            "cap/Rmarkdown/06-grafico-de-caja.Rmd"]

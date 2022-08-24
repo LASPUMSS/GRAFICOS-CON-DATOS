@@ -7,8 +7,12 @@ bookdown::gitbook:
       after: |
         <li><a href="https://github.com/LASPUMSS/GRAFICOS-CON-DATOS" target="blank">Publicado en GitHub Pages</a></li>
     edit: https://github.com/USERNAME/REPO/edit/BRANCH/%s
+    search:
+      engine: lunr # or fuse
     fontsettings:
       theme: white
+      family: sans
+      size: 3
     info: false
     sharing:
       facebook: true

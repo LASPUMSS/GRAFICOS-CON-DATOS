@@ -1,0 +1,23 @@
+# Histograma
+
+
+## Librerias necesarias
+
+```{r, message=FALSE, warning=FALSE}
+library(gcookbook)
+library(reticulate)
+library(ggplot2)
+library(dplyr)
+```
+
+
+## Histograma en R
+
+```{r, out.width="50%", out.height="50%", fig.align='center'}
+
+cars %>% ggplot(aes(x=dist)) + 
+    geom_histogram()
+
+```
+
+## Hisograma en Python

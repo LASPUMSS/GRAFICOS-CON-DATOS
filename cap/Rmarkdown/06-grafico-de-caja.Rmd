@@ -1,0 +1,23 @@
+# Grafico de caja
+
+## Librerias necesarias
+
+```{r, message=FALSE, warning=FALSE}
+library(gcookbook)
+library(reticulate)
+library(ggplot2)
+library(dplyr)
+```
+
+## Grafico de caja en R
+
+```{r, out.width="50%", out.height="50%", fig.align='center'}
+
+cars %>% ggplot(aes(y=dist)) + 
+    geom_boxplot()
+
+
+```
+
+
+## Grafico de caja en Python
