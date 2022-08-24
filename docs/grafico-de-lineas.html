@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Luis Alberto Solis Peña" />
 
 
-<meta name="date" content="2022-08-19" />
+<meta name="date" content="2022-08-23" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -151,8 +151,18 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.2" data-path="grafico-de-disperción.html"><a href="grafico-de-disperción.html#grafico-de-dispercion-con-r"><i class="fa fa-check"></i><b>2.2</b> Grafico de dispercion con R</a></li>
 <li class="chapter" data-level="2.3" data-path="grafico-de-disperción.html"><a href="grafico-de-disperción.html#grafico-de-disperción-con-python"><i class="fa fa-check"></i><b>2.3</b> Grafico de disperción con Python</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="grafico-de-barras.html"><a href="grafico-de-barras.html"><i class="fa fa-check"></i><b>3</b> Grafico De Barras</a></li>
-<li class="chapter" data-level="4" data-path="grafico-de-lineas.html"><a href="grafico-de-lineas.html"><i class="fa fa-check"></i><b>4</b> Grafico De Lineas</a></li>
+<li class="chapter" data-level="3" data-path="grafico-de-barras.html"><a href="grafico-de-barras.html"><i class="fa fa-check"></i><b>3</b> Grafico De Barras</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="grafico-de-barras.html"><a href="grafico-de-barras.html#librerias-necesarias-1"><i class="fa fa-check"></i><b>3.1</b> Librerias necesarias</a></li>
+<li class="chapter" data-level="3.2" data-path="grafico-de-barras.html"><a href="grafico-de-barras.html#grafico-de-barras-con-r"><i class="fa fa-check"></i><b>3.2</b> Grafico de barras con R</a></li>
+<li class="chapter" data-level="3.3" data-path="grafico-de-barras.html"><a href="grafico-de-barras.html#grafico-de-barras-con-python"><i class="fa fa-check"></i><b>3.3</b> Grafico de barras con Python</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="grafico-de-lineas.html"><a href="grafico-de-lineas.html"><i class="fa fa-check"></i><b>4</b> Grafico De Lineas</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="grafico-de-lineas.html"><a href="grafico-de-lineas.html#librerias-necesarias-2"><i class="fa fa-check"></i><b>4.1</b> Librerias necesarias</a></li>
+<li class="chapter" data-level="4.2" data-path="grafico-de-lineas.html"><a href="grafico-de-lineas.html#grafico-de-lineas-en-r"><i class="fa fa-check"></i><b>4.2</b> Grafico de lineas en R</a></li>
+<li class="chapter" data-level="4.3" data-path="grafico-de-lineas.html"><a href="grafico-de-lineas.html#grafico-de-lineas-en-python"><i class="fa fa-check"></i><b>4.3</b> Grafico de lineas en Python</a></li>
+</ul></li>
 <li class="divider"></li>
 <li><a href="https://github.com/LASPUMSS/GRAFICOS-CON-DATOS" target="blank">Publicado en GitHub Pages</a></li>
 
@@ -175,7 +185,33 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="grafico-de-lineas" class="section level1 hasAnchor" number="4">
 <h1><span class="header-section-number">Capítulo 4</span> Grafico De Lineas<a href="grafico-de-lineas.html#grafico-de-lineas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Los graficos de lineas nos permiten ver la evolución de una variable atravez del tiempo que es como generalmente se lo utilizar el grafico de lineas.</p>
+<div id="librerias-necesarias-2" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Librerias necesarias<a href="grafico-de-lineas.html#librerias-necesarias-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="grafico-de-lineas.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb11-2"><a href="grafico-de-lineas.html#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb11-3"><a href="grafico-de-lineas.html#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb11-4"><a href="grafico-de-lineas.html#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="grafico-de-lineas.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb12-2"><a href="grafico-de-lineas.html#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
+</div>
+<div id="grafico-de-lineas-en-r" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Grafico de lineas en R<a href="grafico-de-lineas.html#grafico-de-lineas-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="grafico-de-lineas.html#cb13-1" aria-hidden="true" tabindex="-1"></a>BOD <span class="sc">%&gt;%</span>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Time, <span class="at">y=</span>demand)) <span class="sc">+</span> </span>
+<span id="cb13-2"><a href="grafico-de-lineas.html#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-12-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="grafico-de-lineas-en-python" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Grafico de lineas en Python<a href="grafico-de-lineas.html#grafico-de-lineas-en-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="grafico-de-lineas.html#cb14-1" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb14-2"><a href="grafico-de-lineas.html#cb14-2" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>np.array(r.BOD[<span class="st">&quot;Time&quot;</span>])</span>
+<span id="cb14-3"><a href="grafico-de-lineas.html#cb14-3" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span>np.array(r.BOD[<span class="st">&quot;demand&quot;</span>])</span>
+<span id="cb14-4"><a href="grafico-de-lineas.html#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="grafico-de-lineas.html#cb14-5" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y)</span>
+<span id="cb14-6"><a href="grafico-de-lineas.html#cb14-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 
+</div>
 </div>
             </section>
 

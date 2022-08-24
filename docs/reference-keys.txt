@@ -4,4 +4,10 @@ librerias-necesarias
 grafico-de-dispercion-con-r
 grafico-de-disperción-con-python
 grafico-de-barras
+librerias-necesarias-1
+grafico-de-barras-con-r
+grafico-de-barras-con-python
 grafico-de-lineas
+librerias-necesarias-2
+grafico-de-lineas-en-r
+grafico-de-lineas-en-python
