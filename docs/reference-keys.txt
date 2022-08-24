@@ -21,3 +21,8 @@ grafico-de-caja-en-r
 grafico-de-caja-en-python
 introducción-1
 anotaciones
+ejes
+temas
+leyendas
+facetas
+colores

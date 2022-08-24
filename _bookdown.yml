@@ -11,4 +11,9 @@ rmd_files: ["index.Rmd",
             "cap/Rmarkdown/fund/05-fund-histograma.Rmd",
             "cap/Rmarkdown/fund/06-fund-grafico-de-caja.Rmd",
             "cap/Rmarkdown/perso/01-perso-intro.Rmd",
-            "cap/Rmarkdown/perso/02-perso-anotaciones.Rmd"]
+            "cap/Rmarkdown/perso/02-perso-anotaciones.Rmd",
+            "cap/Rmarkdown/perso/03-perso-ejes.Rmd",
+            "cap/Rmarkdown/perso/04-perso-temas.Rmd",
+            "cap/Rmarkdown/perso/05-perso-leyendas.Rmd",
+            "cap/Rmarkdown/perso/06-perso-facetas.Rmd",
+            "cap/Rmarkdown/perso/07-perso-colores.Rmd"]

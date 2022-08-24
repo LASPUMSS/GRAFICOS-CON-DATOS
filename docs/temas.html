@@ -4,13 +4,13 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 5 Histograma | GRAFICOS CON DATOS</title>
+  <title>Capítulo 10 Temas | GRAFICOS CON DATOS</title>
   <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
 set in the _output.yml file.</p>" />
   <meta name="generator" content="bookdown 0.28 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 5 Histograma | GRAFICOS CON DATOS" />
+  <meta property="og:title" content="Capítulo 10 Temas | GRAFICOS CON DATOS" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
@@ -19,7 +19,7 @@ set in the _output.yml file.</p>" />
   <meta name="github-repo" content="LASPUMSS/GRAFICOS-CON-DATOS" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 5 Histograma | GRAFICOS CON DATOS" />
+  <meta name="twitter:title" content="Capítulo 10 Temas | GRAFICOS CON DATOS" />
   
   <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
 The HTML output format for this example is bookdown::gitbook,
@@ -36,8 +36,8 @@ set in the _output.yml file.</p>" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="grafico-de-lineas.html"/>
-<link rel="next" href="grafico-de-caja.html"/>
+<link rel="prev" href="ejes.html"/>
+<link rel="next" href="leyendas.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -204,45 +204,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="histograma" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Capítulo 5</span> Histograma<a href="histograma.html#histograma" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div id="librerias-necesarias-3" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Librerias necesarias<a href="histograma.html#librerias-necesarias-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="histograma.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
-<span id="cb15-2"><a href="histograma.html#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb15-3"><a href="histograma.html#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb15-4"><a href="histograma.html#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="histograma.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb16-2"><a href="histograma.html#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
-</div>
-<div id="histograma-en-r" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Histograma en R<a href="histograma.html#histograma-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="histograma.html#cb17-1" aria-hidden="true" tabindex="-1"></a>cars <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>dist)) <span class="sc">+</span> </span>
-<span id="cb17-2"><a href="histograma.html#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>()</span></code></pre></div>
-<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
-<p><img src="_main_files/figure-html/unnamed-chunk-16-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
-</div>
-<div id="hisograma-en-python" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Hisograma en Python<a href="histograma.html#hisograma-en-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="histograma.html#cb19-1" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
-<span id="cb19-2"><a href="histograma.html#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-3"><a href="histograma.html#cb19-3" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>np.array(r.cars[<span class="st">&quot;dist&quot;</span>])</span>
-<span id="cb19-4"><a href="histograma.html#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb19-5"><a href="histograma.html#cb19-5" aria-hidden="true" tabindex="-1"></a>plt.hist(x)</span></code></pre></div>
-<pre><code>## (array([ 4.,  8., 14.,  6.,  7.,  4.,  3.,  3.,  0.,  1.]), array([  2. ,  13.8,  25.6,  37.4,  49.2,  61. ,  72.8,  84.6,  96.4,
-##        108.2, 120. ]), &lt;BarContainer object of 10 artists&gt;)</code></pre>
-<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="histograma.html#cb21-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-17-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<div id="temas" class="section level1 hasAnchor" number="10">
+<h1><span class="header-section-number">Capítulo 10</span> Temas<a href="temas.html#temas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="grafico-de-lineas.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="grafico-de-caja.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="ejes.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="leyendas.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -274,7 +246,7 @@ gitbook.start({
 "size": 3
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/cap/Rmarkdown/fund/05-fund-histograma.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/cap/Rmarkdown/perso/04-perso-temas.Rmd",
 "text": "Edit"
 },
 "history": {
