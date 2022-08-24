@@ -19,3 +19,5 @@ grafico-de-caja
 librerias-necesarias-4
 grafico-de-caja-en-r
 grafico-de-caja-en-python
+introducción-1
+anotaciones

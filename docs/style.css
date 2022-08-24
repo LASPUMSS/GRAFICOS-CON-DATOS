@@ -12,3 +12,10 @@ pre {
 pre code {
   white-space: inherit;
 }
+
+/* MIS ESTILOS*/
+
+/* Personalizacion codigo python*/
+span .im{
+    color: rgb(16,40,126) !important;
+}

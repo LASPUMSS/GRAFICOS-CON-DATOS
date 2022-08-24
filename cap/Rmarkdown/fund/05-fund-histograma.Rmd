@@ -10,6 +10,10 @@ library(ggplot2)
 library(dplyr)
 ```
 
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+```
 
 ## Histograma en R
 
@@ -21,3 +25,13 @@ cars %>% ggplot(aes(x=dist)) +
 ```
 
 ## Hisograma en Python
+
+```{python, out.width="50%", out.height="50%", fig.align='center'}
+plt.clf()
+
+x=np.array(r.cars["dist"])
+
+plt.hist(x)
+plt.show()
+```
+

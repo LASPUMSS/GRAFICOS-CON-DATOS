@@ -1,0 +1,12 @@
+# (PART) PERSONALIZACIONES {-}
+
+# Introducción
+
+Si bien ya sabemos como generar un grafico, es hora de ver los destalles que puede hacer mas informativo de un grafico, como agregar facetas, y otros que hacen mas **informativo** a un grafico.
+
+1. Anotaciones
+1. Ejes
+1. Temas
+1. Legendas
+1. Facetas
+1. Colores en parcelas

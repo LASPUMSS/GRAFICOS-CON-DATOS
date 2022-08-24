@@ -4,9 +4,11 @@ language:
   ui:
     chapter_name: "Capítulo "
 rmd_files: ["index.Rmd",
-            "cap/Rmarkdown/01-intro.Rmd",
-            "cap/Rmarkdown/02-grafico-dispersion.Rmd",
-            "cap/Rmarkdown/03-grafico-de-barras.Rmd",
-            "cap/Rmarkdown/04-grafico-de-lineas.Rmd",
-            "cap/Rmarkdown/05-histograma.Rmd",
-            "cap/Rmarkdown/06-grafico-de-caja.Rmd"]
+            "cap/Rmarkdown/fund/01-fund-intro.Rmd",
+            "cap/Rmarkdown/fund/02-fund-grafico-dispersion.Rmd",
+            "cap/Rmarkdown/fund/03-fund-grafico-de-barras.Rmd",
+            "cap/Rmarkdown/fund/04-fund-grafico-de-lineas.Rmd",
+            "cap/Rmarkdown/fund/05-fund-histograma.Rmd",
+            "cap/Rmarkdown/fund/06-fund-grafico-de-caja.Rmd",
+            "cap/Rmarkdown/perso/01-perso-intro.Rmd",
+            "cap/Rmarkdown/perso/02-perso-anotaciones.Rmd"]

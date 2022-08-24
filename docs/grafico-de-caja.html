@@ -37,7 +37,7 @@ set in the _output.yml file.</p>" />
   
   
 <link rel="prev" href="histograma.html"/>
-
+<link rel="next" href="introducción-1.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -176,6 +176,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.2" data-path="grafico-de-caja.html"><a href="grafico-de-caja.html#grafico-de-caja-en-r"><i class="fa fa-check"></i><b>6.2</b> Grafico de caja en R</a></li>
 <li class="chapter" data-level="6.3" data-path="grafico-de-caja.html"><a href="grafico-de-caja.html#grafico-de-caja-en-python"><i class="fa fa-check"></i><b>6.3</b> Grafico de caja en Python</a></li>
 </ul></li>
+<li class="part"><span><b>II PERSONALIZACIONES</b></span></li>
+<li class="chapter" data-level="7" data-path="introducción-1.html"><a href="introducción-1.html"><i class="fa fa-check"></i><b>7</b> Introducción</a></li>
+<li class="chapter" data-level="8" data-path="anotaciones.html"><a href="anotaciones.html"><i class="fa fa-check"></i><b>8</b> Anotaciones</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/LASPUMSS/GRAFICOS-CON-DATOS" target="blank">Publicado en GitHub Pages</a></li>
 
@@ -200,29 +203,42 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h1><span class="header-section-number">Capítulo 6</span> Grafico de caja<a href="grafico-de-caja.html#grafico-de-caja" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <div id="librerias-necesarias-4" class="section level2 hasAnchor" number="6.1">
 <h2><span class="header-section-number">6.1</span> Librerias necesarias<a href="grafico-de-caja.html#librerias-necesarias-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="grafico-de-caja.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
-<span id="cb18-2"><a href="grafico-de-caja.html#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb18-3"><a href="grafico-de-caja.html#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb18-4"><a href="grafico-de-caja.html#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="grafico-de-caja.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb22-2"><a href="grafico-de-caja.html#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb22-3"><a href="grafico-de-caja.html#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb22-4"><a href="grafico-de-caja.html#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb23"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="grafico-de-caja.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb23-2"><a href="grafico-de-caja.html#cb23-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
 </div>
 <div id="grafico-de-caja-en-r" class="section level2 hasAnchor" number="6.2">
 <h2><span class="header-section-number">6.2</span> Grafico de caja en R<a href="grafico-de-caja.html#grafico-de-caja-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="grafico-de-caja.html#cb19-1" aria-hidden="true" tabindex="-1"></a>cars <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y=</span>dist)) <span class="sc">+</span> </span>
-<span id="cb19-2"><a href="grafico-de-caja.html#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_boxplot</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-17-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="grafico-de-caja.html#cb24-1" aria-hidden="true" tabindex="-1"></a>cars <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y=</span>dist)) <span class="sc">+</span> </span>
+<span id="cb24-2"><a href="grafico-de-caja.html#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-20-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="grafico-de-caja-en-python" class="section level2 hasAnchor" number="6.3">
 <h2><span class="header-section-number">6.3</span> Grafico de caja en Python<a href="grafico-de-caja.html#grafico-de-caja-en-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb25"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="grafico-de-caja.html#cb25-1" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb25-2"><a href="grafico-de-caja.html#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="grafico-de-caja.html#cb25-3" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>np.array(r.cars[<span class="st">&quot;dist&quot;</span>])</span>
+<span id="cb25-4"><a href="grafico-de-caja.html#cb25-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-5"><a href="grafico-de-caja.html#cb25-5" aria-hidden="true" tabindex="-1"></a>plt.boxplot(x)</span></code></pre></div>
+<pre><code>## {&#39;whiskers&#39;: [&lt;matplotlib.lines.Line2D object at 0x0000015B0372FE50&gt;, &lt;matplotlib.lines.Line2D object at 0x0000015B03740160&gt;], &#39;caps&#39;: [&lt;matplotlib.lines.Line2D object at 0x0000015B03740430&gt;, &lt;matplotlib.lines.Line2D object at 0x0000015B03740700&gt;], &#39;boxes&#39;: [&lt;matplotlib.lines.Line2D object at 0x0000015B0372FB80&gt;], &#39;medians&#39;: [&lt;matplotlib.lines.Line2D object at 0x0000015B037409D0&gt;], &#39;fliers&#39;: [&lt;matplotlib.lines.Line2D object at 0x0000015B03740CA0&gt;], &#39;means&#39;: []}</code></pre>
+<div class="sourceCode" id="cb27"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="grafico-de-caja.html#cb27-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-21-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 
 </div>
 </div>
+
+
+
             </section>
 
           </div>
         </div>
       </div>
-<a href="histograma.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="histograma.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="introducción-1.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -254,7 +270,7 @@ gitbook.start({
 "size": 3
 },
 "edit": {
-"link": "https://github.com/USERNAME/REPO/edit/BRANCH/cap/Rmarkdown/06-grafico-de-caja.Rmd",
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/cap/Rmarkdown/fund/06-fund-grafico-de-caja.Rmd",
 "text": "Edit"
 },
 "history": {
