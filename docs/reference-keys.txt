@@ -1,4 +1,6 @@
 introducción
+conceptos
+varriable
 grafico-de-disperción
 librerias-necesarias
 grafico-de-dispercion-con-r
