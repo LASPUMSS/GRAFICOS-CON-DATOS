@@ -1,2 +1,18 @@
 # Anotaciones
 
+```{r, message=FALSE, warning=FALSE}
+library(reticulate)
+library(gcookbook)
+library(ggplot2)
+library(dplyr)
+```
+
+```{r, out.width="50%", out.height="50%", fig.align='center'}
+p <- ggplot(faithful, aes(x = eruptions, y = waiting)) +
+  geom_point()
+
+p +
+  annotate("text", x = 3, y = 48, label = "Group 1") +
+  annotate("text", x = 4.5, y = 66, label = "Group 2")
+```
+

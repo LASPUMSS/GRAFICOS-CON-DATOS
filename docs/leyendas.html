@@ -199,6 +199,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="15.2.1" data-path="coches.html"><a href="coches.html#speed"><i class="fa fa-check"></i><b>15.2.1</b> Speed</a></li>
 <li class="chapter" data-level="15.2.2" data-path="coches.html"><a href="coches.html#dist"><i class="fa fa-check"></i><b>15.2.2</b> dist</a></li>
+<li class="chapter" data-level="15.2.3" data-path="coches.html"><a href="coches.html#n"><i class="fa fa-check"></i><b>15.2.3</b> n</a></li>
 </ul></li>
 <li class="chapter" data-level="15.3" data-path="coches.html"><a href="coches.html#fuente"><i class="fa fa-check"></i><b>15.3</b> Fuente</a></li>
 <li class="chapter" data-level="15.4" data-path="coches.html"><a href="coches.html#datos"><i class="fa fa-check"></i><b>15.4</b> Datos</a></li>
@@ -225,6 +226,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="leyendas" class="section level1 hasAnchor" number="11">
 <h1><span class="header-section-number">Capítulo 11</span> Leyendas<a href="leyendas.html#leyendas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="leyendas.html#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb38-2"><a href="leyendas.html#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb38-3"><a href="leyendas.html#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb38-4"><a href="leyendas.html#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="leyendas.html#cb39-1" aria-hidden="true" tabindex="-1"></a>pg_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(PlantGrowth, <span class="fu">aes</span>(<span class="at">x =</span> group, <span class="at">y =</span> weight, <span class="at">fill =</span> group)) <span class="sc">+</span></span>
+<span id="cb39-2"><a href="leyendas.html#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb39-3"><a href="leyendas.html#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Pastel2&quot;</span>)</span>
+<span id="cb39-4"><a href="leyendas.html#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-5"><a href="leyendas.html#cb39-5" aria-hidden="true" tabindex="-1"></a>pg_plot <span class="sc">+</span></span>
+<span id="cb39-6"><a href="leyendas.html#cb39-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;top&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-29-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 
 </div>
             </section>

@@ -199,6 +199,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="15.2.1" data-path="coches.html"><a href="coches.html#speed"><i class="fa fa-check"></i><b>15.2.1</b> Speed</a></li>
 <li class="chapter" data-level="15.2.2" data-path="coches.html"><a href="coches.html#dist"><i class="fa fa-check"></i><b>15.2.2</b> dist</a></li>
+<li class="chapter" data-level="15.2.3" data-path="coches.html"><a href="coches.html#n"><i class="fa fa-check"></i><b>15.2.3</b> n</a></li>
 </ul></li>
 <li class="chapter" data-level="15.3" data-path="coches.html"><a href="coches.html#fuente"><i class="fa fa-check"></i><b>15.3</b> Fuente</a></li>
 <li class="chapter" data-level="15.4" data-path="coches.html"><a href="coches.html#datos"><i class="fa fa-check"></i><b>15.4</b> Datos</a></li>
@@ -225,6 +226,23 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="colores" class="section level1 hasAnchor" number="13">
 <h1><span class="header-section-number">Capítulo 13</span> Colores<a href="colores.html#colores" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="colores.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb44-2"><a href="colores.html#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb44-3"><a href="colores.html#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb44-4"><a href="colores.html#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="colores.html#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(MASS)  <span class="co"># Load MASS for the birthwt data set</span></span></code></pre></div>
+<pre><code>## 
+## Attaching package: &#39;MASS&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:dplyr&#39;:
+## 
+##     select</code></pre>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="colores.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(birthwt, <span class="fu">aes</span>(<span class="at">x =</span> bwt)) <span class="sc">+</span></span>
+<span id="cb48-2"><a href="colores.html#cb48-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>)</span></code></pre></div>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="_main_files/figure-html/unnamed-chunk-33-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="colores.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(<span class="at">x =</span> wt, <span class="at">y =</span> mpg)) <span class="sc">+</span></span>
+<span id="cb50-2"><a href="colores.html#cb50-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">colour =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-33-2.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 
 </div>
 

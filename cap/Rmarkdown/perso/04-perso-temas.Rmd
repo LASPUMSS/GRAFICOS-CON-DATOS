@@ -1,2 +1,32 @@
 # Temas
+```{r, message=FALSE, warning=FALSE}
+library(reticulate)
+library(gcookbook)
+library(ggplot2)
+library(dplyr)
+```
+
+```{r, out.width="50%", out.height="50%", fig.align='center'}
+library(gcookbook)  # Load gcookbook for the heightweight data set
+
+# Create the base plot
+hw_plot <- ggplot(heightweight, aes(x = ageYear, y = heightIn)) +
+  geom_point()
+
+# Grey theme (the default)
+hw_plot +
+  theme_grey()
+
+# Black-and-white theme
+hw_plot +
+  theme_bw()
+
+# Minimal theme without background annotations
+hw_plot +
+  theme_minimal()
+
+# Classic theme, with axis lines but no gridlines
+hw_plot +
+  theme_classic()
+```
 

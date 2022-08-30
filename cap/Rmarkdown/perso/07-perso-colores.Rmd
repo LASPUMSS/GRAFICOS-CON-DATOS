@@ -1,2 +1,19 @@
 # Colores
+```{r, message=FALSE, warning=FALSE}
+library(reticulate)
+library(gcookbook)
+library(ggplot2)
+library(dplyr)
+```
+
+```{r, out.width="50%", out.height="50%", fig.align='center'}
+library(MASS)  # Load MASS for the birthwt data set
+
+ggplot(birthwt, aes(x = bwt)) +
+  geom_histogram(fill = "red", colour = "black")
+
+ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point(colour = "red")
+```
+
 

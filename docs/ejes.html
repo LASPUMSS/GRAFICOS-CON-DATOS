@@ -199,6 +199,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="15.2.1" data-path="coches.html"><a href="coches.html#speed"><i class="fa fa-check"></i><b>15.2.1</b> Speed</a></li>
 <li class="chapter" data-level="15.2.2" data-path="coches.html"><a href="coches.html#dist"><i class="fa fa-check"></i><b>15.2.2</b> dist</a></li>
+<li class="chapter" data-level="15.2.3" data-path="coches.html"><a href="coches.html#n"><i class="fa fa-check"></i><b>15.2.3</b> n</a></li>
 </ul></li>
 <li class="chapter" data-level="15.3" data-path="coches.html"><a href="coches.html#fuente"><i class="fa fa-check"></i><b>15.3</b> Fuente</a></li>
 <li class="chapter" data-level="15.4" data-path="coches.html"><a href="coches.html#datos"><i class="fa fa-check"></i><b>15.4</b> Datos</a></li>
@@ -225,6 +226,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="ejes" class="section level1 hasAnchor" number="9">
 <h1><span class="header-section-number">Capítulo 9</span> Ejes<a href="ejes.html#ejes" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="ejes.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb30-2"><a href="ejes.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb30-3"><a href="ejes.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb30-4"><a href="ejes.html#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="ejes.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PlantGrowth, <span class="fu">aes</span>(<span class="at">x =</span> group, <span class="at">y =</span> weight)) <span class="sc">+</span></span>
+<span id="cb31-2"><a href="ejes.html#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-25-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="ejes.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(PlantGrowth, <span class="fu">aes</span>(<span class="at">x =</span> group, <span class="at">y =</span> weight)) <span class="sc">+</span></span>
+<span id="cb32-2"><a href="ejes.html#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb32-3"><a href="ejes.html#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-25-2.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 
 </div>
             </section>

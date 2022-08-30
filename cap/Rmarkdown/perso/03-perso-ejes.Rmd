@@ -1,3 +1,17 @@
 # Ejes
+```{r, message=FALSE, warning=FALSE}
+library(reticulate)
+library(gcookbook)
+library(ggplot2)
+library(dplyr)
+```
 
+```{r, out.width="50%", out.height="50%", fig.align='center'}
+ggplot(PlantGrowth, aes(x = group, y = weight)) +
+  geom_boxplot()
+
+ggplot(PlantGrowth, aes(x = group, y = weight)) +
+  geom_boxplot() +
+  coord_flip()
+```
 

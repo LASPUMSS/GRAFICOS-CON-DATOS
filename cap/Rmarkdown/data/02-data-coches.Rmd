@@ -13,6 +13,9 @@ Variable numerica, que represeneta la velocidad que ejerce en coche en millas po
 ### dist
 Varibale numerica, que representa la distancia que necesito para detenerce en pies.
 
+### n
+El tamaño de data es de `r round(nrow(cars),0)` observaciones.
+
 ## Fuente
 Ezekiel, M. (1930) Métodos de análisis de correlación. Wiley.
 

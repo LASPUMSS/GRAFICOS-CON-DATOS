@@ -7,7 +7,7 @@ library(ggplot2)
 library(dplyr)
 ```
 
-```{r}
+```{r, out.width="50%", out.height="50%", fig.align='center'}
 # Create the base plot
 mpg_plot <- ggplot(mpg, aes(x = displ, y = hwy)) +
   geom_point()

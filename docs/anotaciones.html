@@ -199,6 +199,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="15.2.1" data-path="coches.html"><a href="coches.html#speed"><i class="fa fa-check"></i><b>15.2.1</b> Speed</a></li>
 <li class="chapter" data-level="15.2.2" data-path="coches.html"><a href="coches.html#dist"><i class="fa fa-check"></i><b>15.2.2</b> dist</a></li>
+<li class="chapter" data-level="15.2.3" data-path="coches.html"><a href="coches.html#n"><i class="fa fa-check"></i><b>15.2.3</b> n</a></li>
 </ul></li>
 <li class="chapter" data-level="15.3" data-path="coches.html"><a href="coches.html#fuente"><i class="fa fa-check"></i><b>15.3</b> Fuente</a></li>
 <li class="chapter" data-level="15.4" data-path="coches.html"><a href="coches.html#datos"><i class="fa fa-check"></i><b>15.4</b> Datos</a></li>
@@ -225,6 +226,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="anotaciones" class="section level1 hasAnchor" number="8">
 <h1><span class="header-section-number">Capítulo 8</span> Anotaciones<a href="anotaciones.html#anotaciones" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="anotaciones.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb28-2"><a href="anotaciones.html#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb28-3"><a href="anotaciones.html#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb28-4"><a href="anotaciones.html#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="anotaciones.html#cb29-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(faithful, <span class="fu">aes</span>(<span class="at">x =</span> eruptions, <span class="at">y =</span> waiting)) <span class="sc">+</span></span>
+<span id="cb29-2"><a href="anotaciones.html#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb29-3"><a href="anotaciones.html#cb29-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-4"><a href="anotaciones.html#cb29-4" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span></span>
+<span id="cb29-5"><a href="anotaciones.html#cb29-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">3</span>, <span class="at">y =</span> <span class="dv">48</span>, <span class="at">label =</span> <span class="st">&quot;Group 1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb29-6"><a href="anotaciones.html#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="fl">4.5</span>, <span class="at">y =</span> <span class="dv">66</span>, <span class="at">label =</span> <span class="st">&quot;Group 2&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-23-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 
 </div>
             </section>

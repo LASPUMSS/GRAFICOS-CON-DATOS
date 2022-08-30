@@ -1,4 +1,4 @@
-tab:unnamed-chunk-24
+tab:unnamed-chunk-34
 introducción
 conceptos
 varriable
@@ -35,5 +35,6 @@ descripción
 variables
 speed
 dist
+n
 fuente
 datos

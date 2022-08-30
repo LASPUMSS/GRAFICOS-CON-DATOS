@@ -1,4 +1,17 @@
 # Leyendas
+```{r, message=FALSE, warning=FALSE}
+library(reticulate)
+library(gcookbook)
+library(ggplot2)
+library(dplyr)
+```
 
+```{r, out.width="50%", out.height="50%", fig.align='center'}
+pg_plot <- ggplot(PlantGrowth, aes(x = group, y = weight, fill = group)) +
+  geom_boxplot() +
+  scale_fill_brewer(palette = "Pastel2")
 
+pg_plot +
+  theme(legend.position = "top")
+```
 

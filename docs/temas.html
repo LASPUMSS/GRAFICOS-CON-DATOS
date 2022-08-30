@@ -199,6 +199,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="15.2.1" data-path="coches.html"><a href="coches.html#speed"><i class="fa fa-check"></i><b>15.2.1</b> Speed</a></li>
 <li class="chapter" data-level="15.2.2" data-path="coches.html"><a href="coches.html#dist"><i class="fa fa-check"></i><b>15.2.2</b> dist</a></li>
+<li class="chapter" data-level="15.2.3" data-path="coches.html"><a href="coches.html#n"><i class="fa fa-check"></i><b>15.2.3</b> n</a></li>
 </ul></li>
 <li class="chapter" data-level="15.3" data-path="coches.html"><a href="coches.html#fuente"><i class="fa fa-check"></i><b>15.3</b> Fuente</a></li>
 <li class="chapter" data-level="15.4" data-path="coches.html"><a href="coches.html#datos"><i class="fa fa-check"></i><b>15.4</b> Datos</a></li>
@@ -225,6 +226,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="temas" class="section level1 hasAnchor" number="10">
 <h1><span class="header-section-number">Capítulo 10</span> Temas<a href="temas.html#temas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="temas.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb33-2"><a href="temas.html#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb33-3"><a href="temas.html#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb33-4"><a href="temas.html#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="temas.html#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)  <span class="co"># Load gcookbook for the heightweight data set</span></span>
+<span id="cb34-2"><a href="temas.html#cb34-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-3"><a href="temas.html#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the base plot</span></span>
+<span id="cb34-4"><a href="temas.html#cb34-4" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(heightweight, <span class="fu">aes</span>(<span class="at">x =</span> ageYear, <span class="at">y =</span> heightIn)) <span class="sc">+</span></span>
+<span id="cb34-5"><a href="temas.html#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb34-6"><a href="temas.html#cb34-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-7"><a href="temas.html#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Grey theme (the default)</span></span>
+<span id="cb34-8"><a href="temas.html#cb34-8" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="sc">+</span></span>
+<span id="cb34-9"><a href="temas.html#cb34-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="temas.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Black-and-white theme</span></span>
+<span id="cb35-2"><a href="temas.html#cb35-2" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="sc">+</span></span>
+<span id="cb35-3"><a href="temas.html#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-2.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="temas.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Minimal theme without background annotations</span></span>
+<span id="cb36-2"><a href="temas.html#cb36-2" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="sc">+</span></span>
+<span id="cb36-3"><a href="temas.html#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-3.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="temas.html#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Classic theme, with axis lines but no gridlines</span></span>
+<span id="cb37-2"><a href="temas.html#cb37-2" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="sc">+</span></span>
+<span id="cb37-3"><a href="temas.html#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-27-4.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 
 </div>
             </section>
