@@ -1,6 +1,8 @@
 delete_merged_file: true
 output_dir: "docs"
 language:
+  label:
+    tab: 'Tabla '
   ui:
     chapter_name: "Capítulo "
 rmd_files: ["index.Rmd",
@@ -17,4 +19,5 @@ rmd_files: ["index.Rmd",
             "cap/Rmarkdown/perso/05-perso-leyendas.Rmd",
             "cap/Rmarkdown/perso/06-perso-facetas.Rmd",
             "cap/Rmarkdown/perso/07-perso-colores.Rmd",
-            "cap/Rmarkdown/data/01-data-intro.Rmd"]
+            "cap/Rmarkdown/data/01-data-intro.Rmd",
+            "cap/Rmarkdown/data/02-data-coches.Rmd"]

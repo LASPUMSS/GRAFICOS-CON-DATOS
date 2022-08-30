@@ -1,0 +1,29 @@
+# Coches
+
+## Descripción
+
+Los datos corresponden a la velocidad de los automóviles y las distancias necesarias para detenerse.teniendo en cuenta que los datos se registraron en la década de 1920.
+
+## Variables
+
+### Speed 
+Variable numerica, que represeneta la velocidad que ejerce en coche en millas por hora.
+
+
+### dist
+Varibale numerica, que representa la distancia que necesito para detenerce en pies.
+
+## Fuente
+Ezekiel, M. (1930) Métodos de análisis de correlación. Wiley.
+
+
+## Datos
+
+```{r, echo=FALSE}
+
+knitr::kable(
+    cars, longtable = TRUE, booktabs = TRUE,
+    caption = 'Velocidad y distancias de frenado de los automóviles.'
+)
+```
+
