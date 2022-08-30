@@ -29,7 +29,7 @@ set in the _output.yml file.</p>" />
 <meta name="author" content="Luis Alberto Solis Peña" />
 
 
-<meta name="date" content="2022-08-28" />
+<meta name="date" content="2022-08-29" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -190,6 +190,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="11" data-path="leyendas.html"><a href="leyendas.html"><i class="fa fa-check"></i><b>11</b> Leyendas</a></li>
 <li class="chapter" data-level="12" data-path="facetas.html"><a href="facetas.html"><i class="fa fa-check"></i><b>12</b> Facetas</a></li>
 <li class="chapter" data-level="13" data-path="colores.html"><a href="colores.html"><i class="fa fa-check"></i><b>13</b> Colores</a></li>
+<li class="part"><span><b>III DATOS</b></span></li>
+<li class="chapter" data-level="14" data-path="introducción-2.html"><a href="introducción-2.html"><i class="fa fa-check"></i><b>14</b> Introducción</a></li>
 <li class="divider"></li>
 <li><a href="https://github.com/LASPUMSS/GRAFICOS-CON-DATOS" target="blank">Publicado en GitHub Pages</a></li>
 
@@ -212,6 +214,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="facetas" class="section level1 hasAnchor" number="12">
 <h1><span class="header-section-number">Capítulo 12</span> Facetas<a href="facetas.html#facetas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="facetas.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb28-2"><a href="facetas.html#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb28-3"><a href="facetas.html#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb28-4"><a href="facetas.html#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="facetas.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create the base plot</span></span>
+<span id="cb29-2"><a href="facetas.html#cb29-2" aria-hidden="true" tabindex="-1"></a>mpg_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mpg, <span class="fu">aes</span>(<span class="at">x =</span> displ, <span class="at">y =</span> hwy)) <span class="sc">+</span></span>
+<span id="cb29-3"><a href="facetas.html#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb29-4"><a href="facetas.html#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="facetas.html#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Faceted by cyl, in horizontally arranged subpanels</span></span>
+<span id="cb29-6"><a href="facetas.html#cb29-6" aria-hidden="true" tabindex="-1"></a>mpg_plot <span class="sc">+</span></span>
+<span id="cb29-7"><a href="facetas.html#cb29-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> cyl)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-23-1.png" width="672" /></p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="facetas.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Faceted by drv, in vertically arranged subpanels</span></span>
+<span id="cb30-2"><a href="facetas.html#cb30-2" aria-hidden="true" tabindex="-1"></a>mpg_plot <span class="sc">+</span></span>
+<span id="cb30-3"><a href="facetas.html#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(drv <span class="sc">~</span> .)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-23-2.png" width="672" /></p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="facetas.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Split by drv (vertical) and cyl (horizontal)</span></span>
+<span id="cb31-2"><a href="facetas.html#cb31-2" aria-hidden="true" tabindex="-1"></a>mpg_plot <span class="sc">+</span></span>
+<span id="cb31-3"><a href="facetas.html#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(drv <span class="sc">~</span> cyl)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-23-3.png" width="672" /></p>
 
 </div>
             </section>

@@ -16,4 +16,5 @@ rmd_files: ["index.Rmd",
             "cap/Rmarkdown/perso/04-perso-temas.Rmd",
             "cap/Rmarkdown/perso/05-perso-leyendas.Rmd",
             "cap/Rmarkdown/perso/06-perso-facetas.Rmd",
-            "cap/Rmarkdown/perso/07-perso-colores.Rmd"]
+            "cap/Rmarkdown/perso/07-perso-colores.Rmd",
+            "cap/Rmarkdown/data/01-data-intro.Rmd"]

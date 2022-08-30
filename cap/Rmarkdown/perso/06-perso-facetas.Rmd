@@ -1,2 +1,27 @@
 # Facetas
 
+```{r, message=FALSE, warning=FALSE}
+library(reticulate)
+library(gcookbook)
+library(ggplot2)
+library(dplyr)
+```
+
+```{r}
+# Create the base plot
+mpg_plot <- ggplot(mpg, aes(x = displ, y = hwy)) +
+  geom_point()
+
+# Faceted by cyl, in horizontally arranged subpanels
+mpg_plot +
+  facet_grid(. ~ cyl)
+
+# Faceted by drv, in vertically arranged subpanels
+mpg_plot +
+  facet_grid(drv ~ .)
+
+# Split by drv (vertical) and cyl (horizontal)
+mpg_plot +
+  facet_grid(drv ~ cyl)
+```
+
