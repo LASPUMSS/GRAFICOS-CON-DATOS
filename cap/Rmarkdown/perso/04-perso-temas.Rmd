@@ -1,4 +1,5 @@
 # Temas
+
 ```{r, message=FALSE, warning=FALSE}
 library(reticulate)
 library(gcookbook)
@@ -6,27 +7,42 @@ library(ggplot2)
 library(dplyr)
 ```
 
+## Crear el gráfico base
 ```{r, out.width="50%", out.height="50%", fig.align='center'}
-library(gcookbook)  # Load gcookbook for the heightweight data set
 
-# Create the base plot
-hw_plot <- ggplot(heightweight, aes(x = ageYear, y = heightIn)) +
+hw_plot <- cars %>%  ggplot(aes(x = speed, y = dist)) +
   geom_point()
 
-# Grey theme (the default)
+```
+
+## Tema por defecto
+```{r, out.width="50%", out.height="50%", fig.align='center'}
+
 hw_plot +
   theme_grey()
 
-# Black-and-white theme
+```
+
+## Tema blanco y negro
+```{r, out.width="50%", out.height="50%", fig.align='center'}
+
 hw_plot +
   theme_bw()
 
-# Minimal theme without background annotations
+```
+
+## Tema minimal
+```{r, out.width="50%", out.height="50%", fig.align='center'}
+
 hw_plot +
   theme_minimal()
 
-# Classic theme, with axis lines but no gridlines
+```
+
+## Tema clasico
+```{r, out.width="50%", out.height="50%", fig.align='center'}
 hw_plot +
   theme_classic()
 ```
+
 

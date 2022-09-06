@@ -1,7 +1,7 @@
-tab:unnamed-chunk-34
+tab:unnamed-chunk-41
 introducción
 conceptos
-varriable
+variable
 grafico-de-disperción
 librerias-necesarias
 grafico-de-dispercion-con-r
@@ -26,8 +26,17 @@ introducción-1
 anotaciones
 ejes
 temas
+crear-el-gráfico-base
+tema-por-defecto
+tema-blanco-y-negro
+tema-minimal
+tema-clasico
 leyendas
 facetas
+crear-el-gráfico-base-1
+crear-facetas-horizontales
+crear-facetas-verticales
+crear-facetas-con-doble-entrada
 colores
 introducción-2
 coches

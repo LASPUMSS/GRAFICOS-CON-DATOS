@@ -1,4 +1,5 @@
 # Leyendas
+
 ```{r, message=FALSE, warning=FALSE}
 library(reticulate)
 library(gcookbook)
@@ -6,8 +7,8 @@ library(ggplot2)
 library(dplyr)
 ```
 
-```{r, out.width="50%", out.height="50%", fig.align='center'}
-pg_plot <- ggplot(PlantGrowth, aes(x = group, y = weight, fill = group)) +
+```{r, out.width="50%", out.height="50%", fig.align='center', warning=FALSE}
+pg_plot <- ggplot(CO2, aes(x = conc, y = uptake, fill = Plant)) +
   geom_boxplot() +
   scale_fill_brewer(palette = "Pastel2")
 

@@ -15,9 +15,17 @@ link-citations: yes
 github-repo: LASPUMSS/GRAFICOS-CON-DATOS
 ---
 
-# Prefracio {-}
+# Presentación {-}
 
-Hola mundo
+Se presentan los gráficos más usados en el análisis de datos, como ser:
+
+- Gráficos de dispersión.
+- Gráficos de barras.
+- Gráficos de líneas.
+- Histogramas.
+- Gráficos de cajas.
+
+
 
 
 ```{r include=FALSE}

@@ -1,4 +1,6 @@
 # Anotaciones
+Las anotaciones nos permiten dar mas información a los usuarios de grafico, esto es subjetivo, deacuerdo a la audiencia a la que esta dirigida los grafico.
+
 
 ```{r, message=FALSE, warning=FALSE}
 library(reticulate)
@@ -8,11 +10,16 @@ library(dplyr)
 ```
 
 ```{r, out.width="50%", out.height="50%", fig.align='center'}
-p <- ggplot(faithful, aes(x = eruptions, y = waiting)) +
+p <- cars %>% ggplot(aes(x=speed, y=dist)) +
   geom_point()
 
 p +
-  annotate("text", x = 3, y = 48, label = "Group 1") +
-  annotate("text", x = 4.5, y = 66, label = "Group 2")
+  annotate("text", x = 10, y = 50, label = "Grupo 1") +
+  annotate("text", x = 23, y = 100, label = "Grupo 2")
 ```
+
+
+
+
+
 

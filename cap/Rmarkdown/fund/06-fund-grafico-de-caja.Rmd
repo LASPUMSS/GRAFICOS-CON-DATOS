@@ -1,4 +1,5 @@
 # Grafico de caja
+Los grafico de caja son utilizados para resumir de forma visual un conjunto de datos, los máximos, mínimos, mediana y cuartiles.
 
 ## Librerias necesarias
 

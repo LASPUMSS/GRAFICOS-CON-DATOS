@@ -1,5 +1,4 @@
 # Grafico De Barras
-
 Los graficos de barras son utilizado comunmente para representar variables discretas o cualitativas.
 
 ## Librerias necesarias
@@ -25,7 +24,7 @@ pg_mean %>% ggplot(aes(x=group, y=weight)) +
 ```
 
 ## Grafico de barras con Python
-```{python, out.width="50%", out.height="50%", fig.align='center'}
+```{python, out.width="50%", out.height="50%", fig.align='center', message=FALSE}
 plt.clf()
 x=np.array(r.pg_mean["group"])
 y=np.array(r.pg_mean["weight"])
