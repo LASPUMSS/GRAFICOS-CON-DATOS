@@ -6,7 +6,7 @@ bookdown::gitbook:
         <li><a href="./"><b>GRAFICOS CON DATOS</b></a></li>
       after: |
         <li><a href="https://github.com/LASPUMSS/GRAFICOS-CON-DATOS" target="blank">Publicado en GitHub Pages</a></li>
-    edit: https://github.com/USERNAME/REPO/edit/BRANCH/%s
+    edit: https://github.com/LASPUMSS/GRAFICOS-CON-DATOS/#
     search:
       engine: lunr # or fuse
     fontsettings:

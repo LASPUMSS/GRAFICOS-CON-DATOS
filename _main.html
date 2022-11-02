@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>GRAFICOS CON DATOS</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown #bookdown:version# and GitBook 2.6.7" />
+
+  <meta property="og:title" content="GRAFICOS CON DATOS" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="LASPUMSS/GRAFICOS-CON-DATOS" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="GRAFICOS CON DATOS" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Luis Alberto Solis Peña" />
+
+
+<meta name="date" content="2022-11-02" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+<!--bookdown:title:start-->
+<div id="header">
+<h1 class="title">GRAFICOS CON DATOS</h1>
+<p class="author"><em>Luis Alberto Solis Peña</em></p>
+<p class="date"><em>2022-11-02</em></p>
+</div>
+<!--bookdown:title:end-->
+
+<!--bookdown:toc:start-->
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+<!--bookdown:toc2:start-->
+<ul>
+<li><a href="#presentación" id="toc-presentación">Presentación<span></span></a></li>
+<li><a href="#part-fundamentos" id="toc-part-fundamentos">(PART) FUNDAMENTOS<span></span></a></li>
+<li><a href="#introducción" id="toc-introducción"><span class="toc-section-number">1</span> Introducción<span></span></a>
+<ul>
+<li><a href="#conceptos" id="toc-conceptos"><span class="toc-section-number">1.1</span> Conceptos<span></span></a>
+<ul>
+<li><a href="#variable" id="toc-variable"><span class="toc-section-number">1.1.1</span> Variable<span></span></a></li>
+</ul></li>
+</ul></li>
+<li><a href="#grafico-de-disperción" id="toc-grafico-de-disperción"><span class="toc-section-number">2</span> Grafico de disperción<span></span></a>
+<ul>
+<li><a href="#librerias-necesarias" id="toc-librerias-necesarias"><span class="toc-section-number">2.1</span> Librerias necesarias<span></span></a></li>
+<li><a href="#grafico-de-dispercion-con-r" id="toc-grafico-de-dispercion-con-r"><span class="toc-section-number">2.2</span> Grafico de dispercion con R<span></span></a></li>
+<li><a href="#grafico-de-disperción-con-python" id="toc-grafico-de-disperción-con-python"><span class="toc-section-number">2.3</span> Grafico de disperción con Python<span></span></a></li>
+</ul></li>
+<li><a href="#grafico-de-barras" id="toc-grafico-de-barras"><span class="toc-section-number">3</span> Grafico De Barras<span></span></a>
+<ul>
+<li><a href="#librerias-necesarias-1" id="toc-librerias-necesarias-1"><span class="toc-section-number">3.1</span> Librerias necesarias<span></span></a></li>
+<li><a href="#grafico-de-barras-con-r" id="toc-grafico-de-barras-con-r"><span class="toc-section-number">3.2</span> Grafico de barras con R<span></span></a></li>
+<li><a href="#grafico-de-barras-con-python" id="toc-grafico-de-barras-con-python"><span class="toc-section-number">3.3</span> Grafico de barras con Python<span></span></a></li>
+</ul></li>
+<li><a href="#grafico-de-lineas" id="toc-grafico-de-lineas"><span class="toc-section-number">4</span> Grafico De Lineas<span></span></a>
+<ul>
+<li><a href="#librerias-necesarias-2" id="toc-librerias-necesarias-2"><span class="toc-section-number">4.1</span> Librerias necesarias<span></span></a></li>
+<li><a href="#grafico-de-lineas-en-r" id="toc-grafico-de-lineas-en-r"><span class="toc-section-number">4.2</span> Grafico de lineas en R<span></span></a></li>
+<li><a href="#grafico-de-lineas-en-python" id="toc-grafico-de-lineas-en-python"><span class="toc-section-number">4.3</span> Grafico de lineas en Python<span></span></a></li>
+</ul></li>
+<li><a href="#histograma" id="toc-histograma"><span class="toc-section-number">5</span> Histograma<span></span></a>
+<ul>
+<li><a href="#librerias-necesarias-3" id="toc-librerias-necesarias-3"><span class="toc-section-number">5.1</span> Librerias necesarias<span></span></a></li>
+<li><a href="#histograma-en-r" id="toc-histograma-en-r"><span class="toc-section-number">5.2</span> Histograma en R<span></span></a></li>
+<li><a href="#hisograma-en-python" id="toc-hisograma-en-python"><span class="toc-section-number">5.3</span> Hisograma en Python<span></span></a></li>
+</ul></li>
+<li><a href="#grafico-de-caja" id="toc-grafico-de-caja"><span class="toc-section-number">6</span> Grafico de caja<span></span></a>
+<ul>
+<li><a href="#librerias-necesarias-4" id="toc-librerias-necesarias-4"><span class="toc-section-number">6.1</span> Librerias necesarias<span></span></a></li>
+<li><a href="#grafico-de-caja-en-r" id="toc-grafico-de-caja-en-r"><span class="toc-section-number">6.2</span> Grafico de caja en R<span></span></a></li>
+<li><a href="#grafico-de-caja-en-python" id="toc-grafico-de-caja-en-python"><span class="toc-section-number">6.3</span> Grafico de caja en Python<span></span></a></li>
+</ul></li>
+<li><a href="#nube-de-palabras" id="toc-nube-de-palabras"><span class="toc-section-number">7</span> Nube de palabras<span></span></a>
+<ul>
+<li><a href="#librerias-necesarias-5" id="toc-librerias-necesarias-5"><span class="toc-section-number">7.1</span> Librerias necesarias<span></span></a></li>
+<li><a href="#preparación-de-los-datos" id="toc-preparación-de-los-datos"><span class="toc-section-number">7.2</span> Preparación de los datos<span></span></a></li>
+<li><a href="#nube-de-letras" id="toc-nube-de-letras"><span class="toc-section-number">7.3</span> Nube de letras<span></span></a></li>
+</ul></li>
+<li><a href="#part-personalizaciones" id="toc-part-personalizaciones">(PART) PERSONALIZACIONES<span></span></a></li>
+<li><a href="#introducción-1" id="toc-introducción-1"><span class="toc-section-number">8</span> Introducción<span></span></a></li>
+<li><a href="#anotaciones" id="toc-anotaciones"><span class="toc-section-number">9</span> Anotaciones<span></span></a></li>
+<li><a href="#ejes" id="toc-ejes"><span class="toc-section-number">10</span> Ejes<span></span></a></li>
+<li><a href="#temas" id="toc-temas"><span class="toc-section-number">11</span> Temas<span></span></a>
+<ul>
+<li><a href="#crear-el-gráfico-base" id="toc-crear-el-gráfico-base"><span class="toc-section-number">11.1</span> Crear el gráfico base<span></span></a></li>
+<li><a href="#tema-por-defecto" id="toc-tema-por-defecto"><span class="toc-section-number">11.2</span> Tema por defecto<span></span></a></li>
+<li><a href="#tema-blanco-y-negro" id="toc-tema-blanco-y-negro"><span class="toc-section-number">11.3</span> Tema blanco y negro<span></span></a></li>
+<li><a href="#tema-minimal" id="toc-tema-minimal"><span class="toc-section-number">11.4</span> Tema minimal<span></span></a></li>
+<li><a href="#tema-clasico" id="toc-tema-clasico"><span class="toc-section-number">11.5</span> Tema clasico<span></span></a></li>
+</ul></li>
+<li><a href="#leyendas" id="toc-leyendas"><span class="toc-section-number">12</span> Leyendas<span></span></a></li>
+<li><a href="#facetas" id="toc-facetas"><span class="toc-section-number">13</span> Facetas<span></span></a>
+<ul>
+<li><a href="#crear-el-gráfico-base-1" id="toc-crear-el-gráfico-base-1"><span class="toc-section-number">13.1</span> Crear el gráfico base<span></span></a></li>
+<li><a href="#crear-facetas-horizontales" id="toc-crear-facetas-horizontales"><span class="toc-section-number">13.2</span> Crear facetas horizontales<span></span></a></li>
+<li><a href="#crear-facetas-verticales" id="toc-crear-facetas-verticales"><span class="toc-section-number">13.3</span> Crear facetas verticales<span></span></a></li>
+<li><a href="#crear-facetas-con-doble-entrada" id="toc-crear-facetas-con-doble-entrada"><span class="toc-section-number">13.4</span> Crear facetas con doble entrada<span></span></a></li>
+</ul></li>
+<li><a href="#colores" id="toc-colores"><span class="toc-section-number">14</span> Colores<span></span></a></li>
+<li><a href="#part-datos" id="toc-part-datos">(PART) DATOS<span></span></a></li>
+<li><a href="#introducción-2" id="toc-introducción-2"><span class="toc-section-number">15</span> Introducción<span></span></a></li>
+<li><a href="#coches" id="toc-coches"><span class="toc-section-number">16</span> Coches<span></span></a>
+<ul>
+<li><a href="#descripción" id="toc-descripción"><span class="toc-section-number">16.1</span> Descripción<span></span></a></li>
+<li><a href="#variables" id="toc-variables"><span class="toc-section-number">16.2</span> Variables<span></span></a>
+<ul>
+<li><a href="#speed" id="toc-speed"><span class="toc-section-number">16.2.1</span> Speed<span></span></a></li>
+<li><a href="#dist" id="toc-dist"><span class="toc-section-number">16.2.2</span> dist<span></span></a></li>
+<li><a href="#n" id="toc-n"><span class="toc-section-number">16.2.3</span> n<span></span></a></li>
+</ul></li>
+<li><a href="#fuente" id="toc-fuente"><span class="toc-section-number">16.3</span> Fuente<span></span></a></li>
+<li><a href="#datos" id="toc-datos"><span class="toc-section-number">16.4</span> Datos<span></span></a></li>
+</ul></li>
+</ul>
+<!--bookdown:toc2:end-->
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">GRAFICOS CON DATOS</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<!--bookdown:toc:end-->
+<!--bookdown:body:start-->
+<div id="presentación" class="section level1 unnumbered hasAnchor">
+<h1 class="unnumbered hasAnchor">Presentación<a href="#presentación" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Se presentan los gráficos más usados en el análisis de datos, como ser:</p>
+<ul>
+<li>Gráficos de dispersión.</li>
+<li>Gráficos de barras.</li>
+<li>Gráficos de líneas.</li>
+<li>Histogramas.</li>
+<li>Gráficos de cajas.</li>
+</ul>
+<!--chapter:end:index.Rmd-->
+</div>
+<div id="part-fundamentos" class="section level1 unnumbered hasAnchor">
+<h1 class="unnumbered hasAnchor">(PART) FUNDAMENTOS<a href="#part-fundamentos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+</div>
+<div id="introducción" class="section level1 hasAnchor" number="1">
+<h1 class="hasAnchor"><span class="header-section-number">1</span> Introducción<a href="#introducción" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Los graficos en el proceso de analisis de datos, son el primer acercamiento con los datos, nos permiten darnos una idea de como se estan comportando estos y reconocer patrones que saltan a la vista como una tendencia o agrupamiento, que despues se ratificara o rechazar empleando modelos mas precisos. Es por esto y mucho mas, que debemos darnos un tiempo prudente en el estudio de los gráficos, y sus mejores practicas.</p>
+<div id="conceptos" class="section level2 hasAnchor" number="1.1">
+<h2 class="hasAnchor"><span class="header-section-number">1.1</span> Conceptos<a href="#conceptos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="variable" class="section level3 hasAnchor" number="1.1.1">
+<h3 class="hasAnchor"><span class="header-section-number">1.1.1</span> Variable<a href="#variable" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>La idea mas general que uno puede hacer al pensar en una variable, es asociarla con algo que <strong>cambia</strong></p>
+<!--chapter:end:cap/Rmarkdown/fund/01-fund-intro.Rmd-->
+</div>
+</div>
+</div>
+<div id="grafico-de-disperción" class="section level1 hasAnchor" number="2">
+<h1 class="hasAnchor"><span class="header-section-number">2</span> Grafico de disperción<a href="#grafico-de-disperción" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>El grafico de diesperión, nos permite representar la relación entre dos variables continuas.</p>
+<div id="librerias-necesarias" class="section level2 hasAnchor" number="2.1">
+<h2 class="hasAnchor"><span class="header-section-number">2.1</span> Librerias necesarias<a href="#librerias-necesarias" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
+</div>
+<div id="grafico-de-dispercion-con-r" class="section level2 hasAnchor" number="2.2">
+<h2 class="hasAnchor"><span class="header-section-number">2.2</span> Grafico de dispercion con R<a href="#grafico-de-dispercion-con-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>cars <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>speed,<span class="at">y=</span>dist)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-4-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="grafico-de-disperción-con-python" class="section level2 hasAnchor" number="2.3">
+<h2 class="hasAnchor"><span class="header-section-number">2.3</span> Grafico de disperción con Python<a href="#grafico-de-disperción-con-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>np.array(r.cars[<span class="st">&quot;speed&quot;</span>])</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span>np.array(r.cars[<span class="st">&quot;dist&quot;</span>])</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>plt.scatter(x,y)</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-5-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<!--chapter:end:cap/Rmarkdown/fund/02-fund-grafico-dispersion.Rmd-->
+</div>
+</div>
+<div id="grafico-de-barras" class="section level1 hasAnchor" number="3">
+<h1 class="hasAnchor"><span class="header-section-number">3</span> Grafico De Barras<a href="#grafico-de-barras" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Los graficos de barras son utilizado comunmente para representar variables discretas o cualitativas.</p>
+<div id="librerias-necesarias-1" class="section level2 hasAnchor" number="3.1">
+<h2 class="hasAnchor"><span class="header-section-number">3.1</span> Librerias necesarias<a href="#librerias-necesarias-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
+</div>
+<div id="grafico-de-barras-con-r" class="section level2 hasAnchor" number="3.2">
+<h2 class="hasAnchor"><span class="header-section-number">3.2</span> Grafico de barras con R<a href="#grafico-de-barras-con-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>pg_mean <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>group, <span class="at">y=</span>weight)) <span class="sc">+</span> </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-8-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="grafico-de-barras-con-python" class="section level2 hasAnchor" number="3.3">
+<h2 class="hasAnchor"><span class="header-section-number">3.3</span> Grafico de barras con Python<a href="#grafico-de-barras-con-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>np.array(r.pg_mean[<span class="st">&quot;group&quot;</span>])</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span>np.array(r.pg_mean[<span class="st">&quot;weight&quot;</span>])</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>plt.bar(x,y)</span></code></pre></div>
+<pre><code>## &lt;BarContainer object of 3 artists&gt;</code></pre>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-9-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<!--chapter:end:cap/Rmarkdown/fund/03-fund-grafico-de-barras.Rmd-->
+</div>
+</div>
+<div id="grafico-de-lineas" class="section level1 hasAnchor" number="4">
+<h1 class="hasAnchor"><span class="header-section-number">4</span> Grafico De Lineas<a href="#grafico-de-lineas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Los graficos de lineas nos permiten ver la evolución de una variable atravez del tiempo que es como generalmente se lo utilizar el grafico de lineas.</p>
+<div id="librerias-necesarias-2" class="section level2 hasAnchor" number="4.1">
+<h2 class="hasAnchor"><span class="header-section-number">4.1</span> Librerias necesarias<a href="#librerias-necesarias-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
+</div>
+<div id="grafico-de-lineas-en-r" class="section level2 hasAnchor" number="4.2">
+<h2 class="hasAnchor"><span class="header-section-number">4.2</span> Grafico de lineas en R<a href="#grafico-de-lineas-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>BOD <span class="sc">%&gt;%</span>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Time, <span class="at">y=</span>demand)) <span class="sc">+</span> </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-12-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="grafico-de-lineas-en-python" class="section level2 hasAnchor" number="4.3">
+<h2 class="hasAnchor"><span class="header-section-number">4.3</span> Grafico de lineas en Python<a href="#grafico-de-lineas-en-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>np.array(r.BOD[<span class="st">&quot;Time&quot;</span>])</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span>np.array(r.BOD[<span class="st">&quot;demand&quot;</span>])</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>plt.plot(x,y)</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<!--chapter:end:cap/Rmarkdown/fund/04-fund-grafico-de-lineas.Rmd-->
+</div>
+</div>
+<div id="histograma" class="section level1 hasAnchor" number="5">
+<h1 class="hasAnchor"><span class="header-section-number">5</span> Histograma<a href="#histograma" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Los histogramas se los utiliza comúnmente para visualizar la forma en se distribuyen los datos.</p>
+<div id="librerias-necesarias-3" class="section level2 hasAnchor" number="5.1">
+<h2 class="hasAnchor"><span class="header-section-number">5.1</span> Librerias necesarias<a href="#librerias-necesarias-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
+</div>
+<div id="histograma-en-r" class="section level2 hasAnchor" number="5.2">
+<h2 class="hasAnchor"><span class="header-section-number">5.2</span> Histograma en R<a href="#histograma-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>cars <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>dist)) <span class="sc">+</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-16-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="hisograma-en-python" class="section level2 hasAnchor" number="5.3">
+<h2 class="hasAnchor"><span class="header-section-number">5.3</span> Hisograma en Python<a href="#hisograma-en-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>np.array(r.cars[<span class="st">&quot;dist&quot;</span>])</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>plt.hist(x)</span></code></pre></div>
+<pre><code>## (array([ 4.,  8., 14.,  6.,  7.,  4.,  3.,  3.,  0.,  1.]), array([  2. ,  13.8,  25.6,  37.4,  49.2,  61. ,  72.8,  84.6,  96.4,
+##        108.2, 120. ]), &lt;BarContainer object of 10 artists&gt;)</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-17-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<!--chapter:end:cap/Rmarkdown/fund/05-fund-histograma.Rmd-->
+</div>
+</div>
+<div id="grafico-de-caja" class="section level1 hasAnchor" number="6">
+<h1 class="hasAnchor"><span class="header-section-number">6</span> Grafico de caja<a href="#grafico-de-caja" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Los grafico de caja son utilizados para resumir de forma visual un conjunto de datos, los máximos, mínimos, mediana y cuartiles.</p>
+<div id="librerias-necesarias-4" class="section level2 hasAnchor" number="6.1">
+<h2 class="hasAnchor"><span class="header-section-number">6.1</span> Librerias necesarias<a href="#librerias-necesarias-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
+</div>
+<div id="grafico-de-caja-en-r" class="section level2 hasAnchor" number="6.2">
+<h2 class="hasAnchor"><span class="header-section-number">6.2</span> Grafico de caja en R<a href="#grafico-de-caja-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>cars <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">y=</span>dist)) <span class="sc">+</span> </span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-20-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="grafico-de-caja-en-python" class="section level2 hasAnchor" number="6.3">
+<h2 class="hasAnchor"><span class="header-section-number">6.3</span> Grafico de caja en Python<a href="#grafico-de-caja-en-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb24"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>plt.clf()</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>np.array(r.cars[<span class="st">&quot;dist&quot;</span>])</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>plt.boxplot(x)</span></code></pre></div>
+<pre><code>## {&#39;whiskers&#39;: [&lt;matplotlib.lines.Line2D object at 0x00000242A629F5B0&gt;, &lt;matplotlib.lines.Line2D object at 0x00000242A6305BE0&gt;], &#39;caps&#39;: [&lt;matplotlib.lines.Line2D object at 0x00000242A63058E0&gt;, &lt;matplotlib.lines.Line2D object at 0x00000242A62BA760&gt;], &#39;boxes&#39;: [&lt;matplotlib.lines.Line2D object at 0x00000242A638F820&gt;], &#39;medians&#39;: [&lt;matplotlib.lines.Line2D object at 0x00000242A62BA220&gt;], &#39;fliers&#39;: [&lt;matplotlib.lines.Line2D object at 0x00000242A62BAB80&gt;], &#39;means&#39;: []}</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-21-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<!--chapter:end:cap/Rmarkdown/fund/06-fund-grafico-de-caja.Rmd-->
+</div>
+</div>
+<div id="nube-de-palabras" class="section level1 hasAnchor" number="7">
+<h1 class="hasAnchor"><span class="header-section-number">7</span> Nube de palabras<a href="#nube-de-palabras" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Las nubes de palabras nos permiten visualizar la frecuencia con la que se repite, para poder graficar este tipo de gráficos se necesita dos variables, una que representa las “palabras” y la otra variable que representa su “frecuencia”. Dentro del análisis de datos con R existen paquetes que guardan este tipo de datos.</p>
+<div id="librerias-necesarias-5" class="section level2 hasAnchor" number="7.1">
+<h2 class="hasAnchor"><span class="header-section-number">7.1</span> Librerias necesarias<a href="#librerias-necesarias-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janeaustenr)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidytext)</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(wordcloud)</span></code></pre></div>
+</div>
+<div id="preparación-de-los-datos" class="section level2 hasAnchor" number="7.2">
+<h2 class="hasAnchor"><span class="header-section-number">7.2</span> Preparación de los datos<a href="#preparación-de-los-datos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>books <span class="ot">&lt;-</span> <span class="fu">austen_books</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(book) <span class="sc">%&gt;%</span></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">linenumber =</span> <span class="fu">row_number</span>(),</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">chapter =</span> <span class="fu">cumsum</span>(<span class="fu">str_detect</span>(text,<span class="fu">regex</span>(<span class="st">&quot;^chapter [</span><span class="sc">\\</span><span class="st">divxlc]&quot;</span>,<span class="at">ignore_case =</span><span class="cn">TRUE</span>)))) <span class="sc">%&gt;%</span></span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ungroup</span>()</span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;stop_words&quot;</span>)</span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>books_words <span class="ot">&lt;-</span> books <span class="sc">%&gt;%</span></span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest_tokens</span>(word, text) <span class="sc">%&gt;%</span> <span class="fu">anti_join</span>(stop_words)</span></code></pre></div>
+</div>
+<div id="nube-de-letras" class="section level2 hasAnchor" number="7.3">
+<h2 class="hasAnchor"><span class="header-section-number">7.3</span> Nube de letras<a href="#nube-de-letras" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>books_words <span class="sc">%&gt;%</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(word, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">with</span>(<span class="fu">wordcloud</span>(word, n, <span class="at">max.words =</span> <span class="dv">100</span>))</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-24-1.png" width="80%" height="80%" style="display: block; margin: auto;" /></p>
+<!--chapter:end:cap/Rmarkdown/fund/07-fund-nube-de-palabras.Rmd-->
+</div>
+</div>
+<div id="part-personalizaciones" class="section level1 unnumbered hasAnchor">
+<h1 class="unnumbered hasAnchor">(PART) PERSONALIZACIONES<a href="#part-personalizaciones" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+</div>
+<div id="introducción-1" class="section level1 hasAnchor" number="8">
+<h1 class="hasAnchor"><span class="header-section-number">8</span> Introducción<a href="#introducción-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Si bien ya sabemos como generar un grafico, es hora de ver los destalles que puede hacer mas informativo de un grafico, como agregar facetas, y otros que hacen mas <strong>informativo</strong> a un grafico.</p>
+<ol style="list-style-type: decimal">
+<li>Anotaciones</li>
+<li>Ejes</li>
+<li>Temas</li>
+<li>Legendas</li>
+<li>Facetas</li>
+<li>Colores en parcelas</li>
+</ol>
+<!--chapter:end:cap/Rmarkdown/perso/01-perso-intro.Rmd-->
+</div>
+<div id="anotaciones" class="section level1 hasAnchor" number="9">
+<h1 class="hasAnchor"><span class="header-section-number">9</span> Anotaciones<a href="#anotaciones" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Las anotaciones nos permiten dar mas información a los usuarios de grafico, esto es subjetivo, deacuerdo a la audiencia a la que esta dirigida los grafico.</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> cars <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>speed, <span class="at">y=</span>dist)) <span class="sc">+</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">10</span>, <span class="at">y =</span> <span class="dv">50</span>, <span class="at">label =</span> <span class="st">&quot;Grupo 1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">23</span>, <span class="at">y =</span> <span class="dv">100</span>, <span class="at">label =</span> <span class="st">&quot;Grupo 2&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-26-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<!--chapter:end:cap/Rmarkdown/perso/02-perso-anotaciones.Rmd-->
+</div>
+<div id="ejes" class="section level1 hasAnchor" number="10">
+<h1 class="hasAnchor"><span class="header-section-number">10</span> Ejes<a href="#ejes" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(cars, <span class="fu">aes</span>(<span class="at">x =</span> speed, <span class="at">y =</span> dist)) <span class="sc">+</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-28-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(cars, <span class="fu">aes</span>(<span class="at">x =</span> speed, <span class="at">y =</span> dist)) <span class="sc">+</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-28-2.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<!--chapter:end:cap/Rmarkdown/perso/03-perso-ejes.Rmd-->
+</div>
+<div id="temas" class="section level1 hasAnchor" number="11">
+<h1 class="hasAnchor"><span class="header-section-number">11</span> Temas<a href="#temas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div id="crear-el-gráfico-base" class="section level2 hasAnchor" number="11.1">
+<h2 class="hasAnchor"><span class="header-section-number">11.1</span> Crear el gráfico base<a href="#crear-el-gráfico-base" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="ot">&lt;-</span> cars <span class="sc">%&gt;%</span>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> speed, <span class="at">y =</span> dist)) <span class="sc">+</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+</div>
+<div id="tema-por-defecto" class="section level2 hasAnchor" number="11.2">
+<h2 class="hasAnchor"><span class="header-section-number">11.2</span> Tema por defecto<a href="#tema-por-defecto" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="sc">+</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-31-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="tema-blanco-y-negro" class="section level2 hasAnchor" number="11.3">
+<h2 class="hasAnchor"><span class="header-section-number">11.3</span> Tema blanco y negro<a href="#tema-blanco-y-negro" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="sc">+</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-32-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="tema-minimal" class="section level2 hasAnchor" number="11.4">
+<h2 class="hasAnchor"><span class="header-section-number">11.4</span> Tema minimal<a href="#tema-minimal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="sc">+</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-33-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="tema-clasico" class="section level2 hasAnchor" number="11.5">
+<h2 class="hasAnchor"><span class="header-section-number">11.5</span> Tema clasico<a href="#tema-clasico" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="sc">+</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-34-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<!--chapter:end:cap/Rmarkdown/perso/04-perso-temas.Rmd-->
+</div>
+</div>
+<div id="leyendas" class="section level1 hasAnchor" number="12">
+<h1 class="hasAnchor"><span class="header-section-number">12</span> Leyendas<a href="#leyendas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>pg_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(CO2, <span class="fu">aes</span>(<span class="at">x =</span> conc, <span class="at">y =</span> uptake, <span class="at">fill =</span> Plant)) <span class="sc">+</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Pastel2&quot;</span>)</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>pg_plot <span class="sc">+</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;top&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-36-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<!--chapter:end:cap/Rmarkdown/perso/05-perso-leyendas.Rmd-->
+</div>
+<div id="facetas" class="section level1 hasAnchor" number="13">
+<h1 class="hasAnchor"><span class="header-section-number">13</span> Facetas<a href="#facetas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Las facetas tienen por objeto segmentar gráficos, en función de una variable categórica.</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div id="crear-el-gráfico-base-1" class="section level2 hasAnchor" number="13.1">
+<h2 class="hasAnchor"><span class="header-section-number">13.1</span> Crear el gráfico base<a href="#crear-el-gráfico-base-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>CO2_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(CO2, <span class="fu">aes</span>(<span class="at">x =</span> conc, <span class="at">y =</span> uptake)) <span class="sc">+</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+</div>
+<div id="crear-facetas-horizontales" class="section level2 hasAnchor" number="13.2">
+<h2 class="hasAnchor"><span class="header-section-number">13.2</span> Crear facetas horizontales<a href="#crear-facetas-horizontales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>CO2_plot <span class="sc">+</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> Type)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-39-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="crear-facetas-verticales" class="section level2 hasAnchor" number="13.3">
+<h2 class="hasAnchor"><span class="header-section-number">13.3</span> Crear facetas verticales<a href="#crear-facetas-verticales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>CO2_plot <span class="sc">+</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">facet_grid</span>(Treatment <span class="sc">~</span> .)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-40-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+</div>
+<div id="crear-facetas-con-doble-entrada" class="section level2 hasAnchor" number="13.4">
+<h2 class="hasAnchor"><span class="header-section-number">13.4</span> Crear facetas con doble entrada<a href="#crear-facetas-con-doble-entrada" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a>CO2_plot <span class="sc">+</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">facet_grid</span>(Treatment <span class="sc">~</span> Type)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-41-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<!--chapter:end:cap/Rmarkdown/perso/06-perso-facetas.Rmd-->
+</div>
+</div>
+<div id="colores" class="section level1 hasAnchor" number="14">
+<h1 class="hasAnchor"><span class="header-section-number">14</span> Colores<a href="#colores" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(cars, <span class="fu">aes</span>(<span class="at">x =</span> dist)) <span class="sc">+</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-43-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(cars, <span class="fu">aes</span>(<span class="at">x =</span> speed, <span class="at">y =</span> dist)) <span class="sc">+</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">colour =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-43-2.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<!--chapter:end:cap/Rmarkdown/perso/07-perso-colores.Rmd-->
+</div>
+<div id="part-datos" class="section level1 unnumbered hasAnchor">
+<h1 class="unnumbered hasAnchor">(PART) DATOS<a href="#part-datos" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+</div>
+<div id="introducción-2" class="section level1 hasAnchor" number="15">
+<h1 class="hasAnchor"><span class="header-section-number">15</span> Introducción<a href="#introducción-2" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>En esta sección se presentara la ficha tecnica de los marcos de datos que se utilizan en el libro, describiendo el contextos de base de datos y significado de cada variable.</p>
+<!--chapter:end:cap/Rmarkdown/data/01-data-intro.Rmd-->
+</div>
+<div id="coches" class="section level1 hasAnchor" number="16">
+<h1 class="hasAnchor"><span class="header-section-number">16</span> Coches<a href="#coches" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="descripción" class="section level2 hasAnchor" number="16.1">
+<h2 class="hasAnchor"><span class="header-section-number">16.1</span> Descripción<a href="#descripción" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Los datos corresponden a la velocidad de los automóviles y las distancias necesarias para detenerse.teniendo en cuenta que los datos se registraron en la década de 1920.</p>
+</div>
+<div id="variables" class="section level2 hasAnchor" number="16.2">
+<h2 class="hasAnchor"><span class="header-section-number">16.2</span> Variables<a href="#variables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="speed" class="section level3 hasAnchor" number="16.2.1">
+<h3 class="hasAnchor"><span class="header-section-number">16.2.1</span> Speed<a href="#speed" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Variable numerica, que represeneta la velocidad que ejerce en coche en millas por hora.</p>
+</div>
+<div id="dist" class="section level3 hasAnchor" number="16.2.2">
+<h3 class="hasAnchor"><span class="header-section-number">16.2.2</span> dist<a href="#dist" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Varibale numerica, que representa la distancia que necesito para detenerce en pies.</p>
+</div>
+<div id="n" class="section level3 hasAnchor" number="16.2.3">
+<h3 class="hasAnchor"><span class="header-section-number">16.2.3</span> n<a href="#n" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>El tamaño de data es de 50 observaciones.</p>
+</div>
+</div>
+<div id="fuente" class="section level2 hasAnchor" number="16.3">
+<h2 class="hasAnchor"><span class="header-section-number">16.3</span> Fuente<a href="#fuente" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Ezekiel, M. (1930) Métodos de análisis de correlación. Wiley.</p>
+</div>
+<div id="datos" class="section level2 hasAnchor" number="16.4">
+<h2 class="hasAnchor"><span class="header-section-number">16.4</span> Datos<a href="#datos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<caption>(#tab:unnamed-chunk-44)Velocidad y distancias de frenado de los automóviles.</caption>
+<thead>
+<tr class="header">
+<th align="right">speed</th>
+<th align="right">dist</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">4</td>
+<td align="right">2</td>
+</tr>
+<tr class="even">
+<td align="right">4</td>
+<td align="right">10</td>
+</tr>
+<tr class="odd">
+<td align="right">7</td>
+<td align="right">4</td>
+</tr>
+<tr class="even">
+<td align="right">7</td>
+<td align="right">22</td>
+</tr>
+<tr class="odd">
+<td align="right">8</td>
+<td align="right">16</td>
+</tr>
+<tr class="even">
+<td align="right">9</td>
+<td align="right">10</td>
+</tr>
+<tr class="odd">
+<td align="right">10</td>
+<td align="right">18</td>
+</tr>
+<tr class="even">
+<td align="right">10</td>
+<td align="right">26</td>
+</tr>
+<tr class="odd">
+<td align="right">10</td>
+<td align="right">34</td>
+</tr>
+<tr class="even">
+<td align="right">11</td>
+<td align="right">17</td>
+</tr>
+<tr class="odd">
+<td align="right">11</td>
+<td align="right">28</td>
+</tr>
+<tr class="even">
+<td align="right">12</td>
+<td align="right">14</td>
+</tr>
+<tr class="odd">
+<td align="right">12</td>
+<td align="right">20</td>
+</tr>
+<tr class="even">
+<td align="right">12</td>
+<td align="right">24</td>
+</tr>
+<tr class="odd">
+<td align="right">12</td>
+<td align="right">28</td>
+</tr>
+<tr class="even">
+<td align="right">13</td>
+<td align="right">26</td>
+</tr>
+<tr class="odd">
+<td align="right">13</td>
+<td align="right">34</td>
+</tr>
+<tr class="even">
+<td align="right">13</td>
+<td align="right">34</td>
+</tr>
+<tr class="odd">
+<td align="right">13</td>
+<td align="right">46</td>
+</tr>
+<tr class="even">
+<td align="right">14</td>
+<td align="right">26</td>
+</tr>
+<tr class="odd">
+<td align="right">14</td>
+<td align="right">36</td>
+</tr>
+<tr class="even">
+<td align="right">14</td>
+<td align="right">60</td>
+</tr>
+<tr class="odd">
+<td align="right">14</td>
+<td align="right">80</td>
+</tr>
+<tr class="even">
+<td align="right">15</td>
+<td align="right">20</td>
+</tr>
+<tr class="odd">
+<td align="right">15</td>
+<td align="right">26</td>
+</tr>
+<tr class="even">
+<td align="right">15</td>
+<td align="right">54</td>
+</tr>
+<tr class="odd">
+<td align="right">16</td>
+<td align="right">32</td>
+</tr>
+<tr class="even">
+<td align="right">16</td>
+<td align="right">40</td>
+</tr>
+<tr class="odd">
+<td align="right">17</td>
+<td align="right">32</td>
+</tr>
+<tr class="even">
+<td align="right">17</td>
+<td align="right">40</td>
+</tr>
+<tr class="odd">
+<td align="right">17</td>
+<td align="right">50</td>
+</tr>
+<tr class="even">
+<td align="right">18</td>
+<td align="right">42</td>
+</tr>
+<tr class="odd">
+<td align="right">18</td>
+<td align="right">56</td>
+</tr>
+<tr class="even">
+<td align="right">18</td>
+<td align="right">76</td>
+</tr>
+<tr class="odd">
+<td align="right">18</td>
+<td align="right">84</td>
+</tr>
+<tr class="even">
+<td align="right">19</td>
+<td align="right">36</td>
+</tr>
+<tr class="odd">
+<td align="right">19</td>
+<td align="right">46</td>
+</tr>
+<tr class="even">
+<td align="right">19</td>
+<td align="right">68</td>
+</tr>
+<tr class="odd">
+<td align="right">20</td>
+<td align="right">32</td>
+</tr>
+<tr class="even">
+<td align="right">20</td>
+<td align="right">48</td>
+</tr>
+<tr class="odd">
+<td align="right">20</td>
+<td align="right">52</td>
+</tr>
+<tr class="even">
+<td align="right">20</td>
+<td align="right">56</td>
+</tr>
+<tr class="odd">
+<td align="right">20</td>
+<td align="right">64</td>
+</tr>
+<tr class="even">
+<td align="right">22</td>
+<td align="right">66</td>
+</tr>
+<tr class="odd">
+<td align="right">23</td>
+<td align="right">54</td>
+</tr>
+<tr class="even">
+<td align="right">24</td>
+<td align="right">70</td>
+</tr>
+<tr class="odd">
+<td align="right">24</td>
+<td align="right">92</td>
+</tr>
+<tr class="even">
+<td align="right">24</td>
+<td align="right">93</td>
+</tr>
+<tr class="odd">
+<td align="right">24</td>
+<td align="right">120</td>
+</tr>
+<tr class="even">
+<td align="right">25</td>
+<td align="right">85</td>
+</tr>
+</tbody>
+</table>
+<!--chapter:end:cap/Rmarkdown/data/02-data-coches.Rmd-->
+</div>
+</div>
+<!--bookdown:body:end-->
+            </section>
+
+          </div>
+        </div>
+      </div>
+<!--bookdown:link_prev-->
+<!--bookdown:link_next-->
+    </div>
+  </div>
+<!--bookdown:config-->
+
+</body>
+
+</html>
