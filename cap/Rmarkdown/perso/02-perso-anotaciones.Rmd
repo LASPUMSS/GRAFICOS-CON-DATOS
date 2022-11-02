@@ -2,14 +2,14 @@
 Las anotaciones nos permiten dar mas información a los usuarios de grafico, esto es subjetivo, deacuerdo a la audiencia a la que esta dirigida los grafico.
 
 
-```{r, message=FALSE, warning=FALSE}
+```{r}
 library(reticulate)
 library(gcookbook)
 library(ggplot2)
 library(dplyr)
 ```
 
-```{r, out.width="50%", out.height="50%", fig.align='center'}
+```{r}
 p <- cars %>% ggplot(aes(x=speed, y=dist)) +
   geom_point()
 

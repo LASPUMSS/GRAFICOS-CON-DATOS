@@ -5,7 +5,7 @@ Los graficos de lineas nos permiten ver la evolución de una variable atravez de
 
 ## Librerias necesarias
 
-```{r, message=FALSE, warning=FALSE}
+```{r}
 library(gcookbook)
 library(reticulate)
 library(ggplot2)
@@ -19,13 +19,13 @@ import matplotlib.pyplot as plt
 
 ## Grafico de lineas en R
 
-```{r, out.width="50%", out.height="50%", fig.align='center'}
+```{r}
 BOD %>%  ggplot(aes(x=Time, y=demand)) + 
     geom_line()
 ```
 
 ## Grafico de lineas en Python 
-```{python, out.width="50%", out.height="50%", fig.align='center'}
+```{python}
 plt.clf()
 x=np.array(r.BOD["Time"])
 y=np.array(r.BOD["demand"])

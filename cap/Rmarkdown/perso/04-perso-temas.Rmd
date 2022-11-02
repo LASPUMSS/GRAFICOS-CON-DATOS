@@ -1,6 +1,6 @@
 # Temas
 
-```{r, message=FALSE, warning=FALSE}
+```{r}
 library(reticulate)
 library(gcookbook)
 library(ggplot2)
@@ -8,7 +8,7 @@ library(dplyr)
 ```
 
 ## Crear el gráfico base
-```{r, out.width="50%", out.height="50%", fig.align='center'}
+```{r}
 
 hw_plot <- cars %>%  ggplot(aes(x = speed, y = dist)) +
   geom_point()
@@ -16,7 +16,7 @@ hw_plot <- cars %>%  ggplot(aes(x = speed, y = dist)) +
 ```
 
 ## Tema por defecto
-```{r, out.width="50%", out.height="50%", fig.align='center'}
+```{r}
 
 hw_plot +
   theme_grey()
@@ -24,7 +24,7 @@ hw_plot +
 ```
 
 ## Tema blanco y negro
-```{r, out.width="50%", out.height="50%", fig.align='center'}
+```{r}
 
 hw_plot +
   theme_bw()
@@ -32,7 +32,7 @@ hw_plot +
 ```
 
 ## Tema minimal
-```{r, out.width="50%", out.height="50%", fig.align='center'}
+```{r}
 
 hw_plot +
   theme_minimal()
@@ -40,7 +40,7 @@ hw_plot +
 ```
 
 ## Tema clasico
-```{r, out.width="50%", out.height="50%", fig.align='center'}
+```{r}
 hw_plot +
   theme_classic()
 ```

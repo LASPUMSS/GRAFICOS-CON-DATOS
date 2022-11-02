@@ -3,7 +3,7 @@ Los histogramas se los utiliza comúnmente para visualizar la forma en se distri
 
 ## Librerias necesarias
 
-```{r, message=FALSE, warning=FALSE}
+```{r}
 library(gcookbook)
 library(reticulate)
 library(ggplot2)
@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 
 ## Histograma en R
 
-```{r, out.width="50%", out.height="50%", fig.align='center'}
+```{r}
 
 cars %>% ggplot(aes(x=dist)) + 
     geom_histogram()
@@ -26,7 +26,7 @@ cars %>% ggplot(aes(x=dist)) +
 
 ## Hisograma en Python
 
-```{python, out.width="50%", out.height="50%", fig.align='center'}
+```{python}
 plt.clf()
 
 x=np.array(r.cars["dist"])

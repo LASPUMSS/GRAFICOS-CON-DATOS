@@ -1,7 +1,6 @@
 # (PART) DATOS {-}
 
 # Introducción
-<div style="text-align: justify"> 
 En esta sección se presentara la ficha tecnica de los marcos de datos que se utilizan en el libro, describiendo el contextos de base de datos y significado de cada variable.
-</div>
+
 

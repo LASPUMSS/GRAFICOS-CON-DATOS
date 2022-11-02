@@ -246,31 +246,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="facetas" class="section level1 hasAnchor" number="13">
 <h1><span class="header-section-number">Capítulo 13</span> Facetas<a href="facetas.html#facetas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Las facetas tienen por objeto segmentar gráficos, en función de una variable categórica.</p>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="facetas.html#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb44-2"><a href="facetas.html#cb44-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
-<span id="cb44-3"><a href="facetas.html#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb44-4"><a href="facetas.html#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="facetas.html#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb43-2"><a href="facetas.html#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb43-3"><a href="facetas.html#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb43-4"><a href="facetas.html#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
 <div id="crear-el-gráfico-base-1" class="section level2 hasAnchor" number="13.1">
 <h2><span class="header-section-number">13.1</span> Crear el gráfico base<a href="facetas.html#crear-el-gráfico-base-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="facetas.html#cb45-1" aria-hidden="true" tabindex="-1"></a>CO2_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(CO2, <span class="fu">aes</span>(<span class="at">x =</span> conc, <span class="at">y =</span> uptake)) <span class="sc">+</span></span>
-<span id="cb45-2"><a href="facetas.html#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="facetas.html#cb44-1" aria-hidden="true" tabindex="-1"></a>CO2_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(CO2, <span class="fu">aes</span>(<span class="at">x =</span> conc, <span class="at">y =</span> uptake)) <span class="sc">+</span></span>
+<span id="cb44-2"><a href="facetas.html#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
 </div>
 <div id="crear-facetas-horizontales" class="section level2 hasAnchor" number="13.2">
 <h2><span class="header-section-number">13.2</span> Crear facetas horizontales<a href="facetas.html#crear-facetas-horizontales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="facetas.html#cb46-1" aria-hidden="true" tabindex="-1"></a>CO2_plot <span class="sc">+</span></span>
-<span id="cb46-2"><a href="facetas.html#cb46-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> Type)</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="facetas.html#cb45-1" aria-hidden="true" tabindex="-1"></a>CO2_plot <span class="sc">+</span></span>
+<span id="cb45-2"><a href="facetas.html#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_grid</span>(. <span class="sc">~</span> Type)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-39-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="crear-facetas-verticales" class="section level2 hasAnchor" number="13.3">
 <h2><span class="header-section-number">13.3</span> Crear facetas verticales<a href="facetas.html#crear-facetas-verticales" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="facetas.html#cb47-1" aria-hidden="true" tabindex="-1"></a>CO2_plot <span class="sc">+</span></span>
-<span id="cb47-2"><a href="facetas.html#cb47-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">facet_grid</span>(Treatment <span class="sc">~</span> .)</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="facetas.html#cb46-1" aria-hidden="true" tabindex="-1"></a>CO2_plot <span class="sc">+</span></span>
+<span id="cb46-2"><a href="facetas.html#cb46-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">facet_grid</span>(Treatment <span class="sc">~</span> .)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-40-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="crear-facetas-con-doble-entrada" class="section level2 hasAnchor" number="13.4">
 <h2><span class="header-section-number">13.4</span> Crear facetas con doble entrada<a href="facetas.html#crear-facetas-con-doble-entrada" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="facetas.html#cb48-1" aria-hidden="true" tabindex="-1"></a>CO2_plot <span class="sc">+</span></span>
-<span id="cb48-2"><a href="facetas.html#cb48-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">facet_grid</span>(Treatment <span class="sc">~</span> Type)</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="facetas.html#cb47-1" aria-hidden="true" tabindex="-1"></a>CO2_plot <span class="sc">+</span></span>
+<span id="cb47-2"><a href="facetas.html#cb47-2" aria-hidden="true" tabindex="-1"></a> <span class="fu">facet_grid</span>(Treatment <span class="sc">~</span> Type)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-41-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 
 </div>

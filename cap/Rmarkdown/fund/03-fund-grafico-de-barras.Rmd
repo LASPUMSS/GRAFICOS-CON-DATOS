@@ -3,7 +3,7 @@ Los graficos de barras son utilizado comunmente para representar variables discr
 
 ## Librerias necesarias
 
-```{r, message=FALSE, warning=FALSE}
+```{r}
 library(gcookbook)
 library(reticulate)
 library(ggplot2)
@@ -18,17 +18,16 @@ import matplotlib.pyplot as plt
 ## Grafico de barras con R
 
 
-```{r, out.width="50%", out.height="50%", fig.align='center'}
+```{r}
 pg_mean %>% ggplot(aes(x=group, y=weight)) + 
     geom_col()
 ```
 
 ## Grafico de barras con Python
-```{python, out.width="50%", out.height="50%", fig.align='center', message=FALSE}
+```{python}
 plt.clf()
 x=np.array(r.pg_mean["group"])
 y=np.array(r.pg_mean["weight"])
-
 
 plt.bar(x,y)
 plt.show()

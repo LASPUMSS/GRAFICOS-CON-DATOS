@@ -25,12 +25,17 @@ Se presentan los gráficos más usados en el análisis de datos, como ser:
 - Histogramas.
 - Gráficos de cajas.
 
-
-
-
 ```{r include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,
+                      message = FALSE,
+                      warning = FALSE,
+                      out.width = "50%",
+                      out.height = "50%",
+                      fig.align = "center")
+
 # automatically create a bib database for R packages
 knitr::write_bib(c(
   .packages(), 'bookdown', 'knitr', 'rmarkdown'
 ), 'packages.bib')
 ```
+

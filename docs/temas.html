@@ -245,37 +245,37 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="temas" class="section level1 hasAnchor" number="11">
 <h1><span class="header-section-number">Capítulo 11</span> Temas<a href="temas.html#temas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="temas.html#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb36-2"><a href="temas.html#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
-<span id="cb36-3"><a href="temas.html#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb36-4"><a href="temas.html#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb35"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb35-1"><a href="temas.html#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb35-2"><a href="temas.html#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb35-3"><a href="temas.html#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb35-4"><a href="temas.html#cb35-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
 <div id="crear-el-gráfico-base" class="section level2 hasAnchor" number="11.1">
 <h2><span class="header-section-number">11.1</span> Crear el gráfico base<a href="temas.html#crear-el-gráfico-base" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="temas.html#cb37-1" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="ot">&lt;-</span> cars <span class="sc">%&gt;%</span>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> speed, <span class="at">y =</span> dist)) <span class="sc">+</span></span>
-<span id="cb37-2"><a href="temas.html#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb36-1"><a href="temas.html#cb36-1" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="ot">&lt;-</span> cars <span class="sc">%&gt;%</span>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> speed, <span class="at">y =</span> dist)) <span class="sc">+</span></span>
+<span id="cb36-2"><a href="temas.html#cb36-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span></code></pre></div>
 </div>
 <div id="tema-por-defecto" class="section level2 hasAnchor" number="11.2">
 <h2><span class="header-section-number">11.2</span> Tema por defecto<a href="temas.html#tema-por-defecto" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="temas.html#cb38-1" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="sc">+</span></span>
-<span id="cb38-2"><a href="temas.html#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb37"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb37-1"><a href="temas.html#cb37-1" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="sc">+</span></span>
+<span id="cb37-2"><a href="temas.html#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_grey</span>()</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-31-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="tema-blanco-y-negro" class="section level2 hasAnchor" number="11.3">
 <h2><span class="header-section-number">11.3</span> Tema blanco y negro<a href="temas.html#tema-blanco-y-negro" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="temas.html#cb39-1" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="sc">+</span></span>
-<span id="cb39-2"><a href="temas.html#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="temas.html#cb38-1" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="sc">+</span></span>
+<span id="cb38-2"><a href="temas.html#cb38-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>()</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-32-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="tema-minimal" class="section level2 hasAnchor" number="11.4">
 <h2><span class="header-section-number">11.4</span> Tema minimal<a href="temas.html#tema-minimal" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="temas.html#cb40-1" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="sc">+</span></span>
-<span id="cb40-2"><a href="temas.html#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="temas.html#cb39-1" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="sc">+</span></span>
+<span id="cb39-2"><a href="temas.html#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-33-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="tema-clasico" class="section level2 hasAnchor" number="11.5">
 <h2><span class="header-section-number">11.5</span> Tema clasico<a href="temas.html#tema-clasico" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="temas.html#cb41-1" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="sc">+</span></span>
-<span id="cb41-2"><a href="temas.html#cb41-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb40-1"><a href="temas.html#cb40-1" aria-hidden="true" tabindex="-1"></a>hw_plot <span class="sc">+</span></span>
+<span id="cb40-2"><a href="temas.html#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-34-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 
 </div>

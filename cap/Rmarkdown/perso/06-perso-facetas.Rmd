@@ -1,7 +1,7 @@
 # Facetas
 Las facetas tienen por objeto segmentar gráficos, en función de una variable categórica.
 
-```{r, message=FALSE, warning=FALSE}
+```{r}
 library(reticulate)
 library(gcookbook)
 library(ggplot2)
@@ -9,7 +9,7 @@ library(dplyr)
 ```
 
 ## Crear el gráfico base
-```{r, out.width="50%", out.height="50%", fig.align='center'}
+```{r}
 CO2_plot <- ggplot(CO2, aes(x = conc, y = uptake)) +
   geom_point()
 
@@ -17,21 +17,21 @@ CO2_plot <- ggplot(CO2, aes(x = conc, y = uptake)) +
 
 
 ## Crear facetas horizontales
-```{r, out.width="50%", out.height="50%", fig.align='center'}
+```{r}
 CO2_plot +
   facet_grid(. ~ Type)
 
 ```
 
 ## Crear facetas verticales
-```{r, out.width="50%", out.height="50%", fig.align='center'}
+```{r}
 CO2_plot +
  facet_grid(Treatment ~ .)
 
 ```
 
 ## Crear facetas con doble entrada
-```{r, out.width="50%", out.height="50%", fig.align='center'}
+```{r}
 CO2_plot +
  facet_grid(Treatment ~ Type)
 ```

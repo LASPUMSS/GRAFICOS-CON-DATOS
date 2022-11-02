@@ -20,6 +20,11 @@ span .im{
     color: rgb(16,40,126) !important;
 }
 
+/* Centar el texto */
+p {
+    text-align: justify !important;
+}
+
 /* CELULARES*/
 /* Imageners al 100% de ancho en celulares*/
 @media only screen and (max-width: 768px) {

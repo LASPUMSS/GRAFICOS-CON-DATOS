@@ -1,13 +1,13 @@
 # Leyendas
 
-```{r, message=FALSE, warning=FALSE}
+```{r}
 library(reticulate)
 library(gcookbook)
 library(ggplot2)
 library(dplyr)
 ```
 
-```{r, out.width="50%", out.height="50%", fig.align='center', warning=FALSE}
+```{r}
 pg_plot <- ggplot(CO2, aes(x = conc, y = uptake, fill = Plant)) +
   geom_boxplot() +
   scale_fill_brewer(palette = "Pastel2")

@@ -3,7 +3,7 @@ Los grafico de caja son utilizados para resumir de forma visual un conjunto de d
 
 ## Librerias necesarias
 
-```{r, message=FALSE, warning=FALSE}
+```{r}
 library(gcookbook)
 library(reticulate)
 library(ggplot2)
@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 
 ## Grafico de caja en R
 
-```{r, message=FALSE, warning=FALSE, out.width="50%", out.height="50%", fig.align='center'}
+```{r}
 
 cars %>% ggplot(aes(y=dist)) + 
     geom_boxplot()
@@ -27,7 +27,7 @@ cars %>% ggplot(aes(y=dist)) +
 
 ## Grafico de caja en Python
 
-```{python, message=FALSE, warning=FALSE, out.width="50%", out.height="50%", fig.align='center'}
+```{python}
 plt.clf()
 
 x=np.array(r.cars["dist"])

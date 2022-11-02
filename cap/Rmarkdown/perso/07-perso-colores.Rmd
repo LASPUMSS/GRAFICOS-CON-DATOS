@@ -1,13 +1,13 @@
 # Colores
 
-```{r, message=FALSE, warning=FALSE}
+```{r}
 library(reticulate)
 library(gcookbook)
 library(ggplot2)
 library(dplyr)
 ```
 
-```{r, out.width="50%", out.height="50%", fig.align='center', message=FALSE}
+```{r}
 ggplot(cars, aes(x = dist)) +
   geom_histogram(fill = "red", colour = "black")
 
