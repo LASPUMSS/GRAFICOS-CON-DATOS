@@ -3,5 +3,5 @@
 .RData
 .Ruserdata
 
-r-env/
-python-env/
+.Rproj.user/
+_bookdown_files/
