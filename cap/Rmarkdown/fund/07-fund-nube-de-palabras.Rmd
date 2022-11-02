@@ -1,0 +1,36 @@
+# Nube de palabras
+Las nubes de palabras nos permiten visualizar la frequencia con la que se repirte, para poder graficar este tipo de graficos se necesesta dos variables la "palabra" y su "frequencia". Dentro del analisis de datos con R existen paquetes que guardan este tipo de datos.
+
+## Librerias necesarias
+
+```{r, message=FALSE, warning=FALSE}
+library(janeaustenr)
+library(tidytext)
+library(dplyr)
+library(stringr)
+library(wordcloud)
+```
+
+## Preparación de los datos
+```{r, message=FALSE, warning=FALSE}
+books <- austen_books() %>%
+    group_by(book) %>%
+    mutate(linenumber = row_number(),
+           chapter = cumsum(str_detect(text,regex("^chapter [\\divxlc]",ignore_case =TRUE)))) %>%
+    ungroup()
+
+data("stop_words")
+books_words <- books %>%
+    unnest_tokens(word, text) %>% anti_join(stop_words)
+
+```
+
+## Nube de letras
+```{r, message=FALSE, warning=FALSE, out.width="50%", out.height="50%", fig.align='center'}
+
+books_words %>%
+  count(word, sort = TRUE) %>%
+  with(wordcloud(word, n, max.words = 100))
+
+```
+

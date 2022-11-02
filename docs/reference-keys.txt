@@ -1,4 +1,4 @@
-tab:unnamed-chunk-41
+tab:unnamed-chunk-44
 introducción
 conceptos
 variable
@@ -22,6 +22,10 @@ grafico-de-caja
 librerias-necesarias-4
 grafico-de-caja-en-r
 grafico-de-caja-en-python
+nube-de-palabras
+librerias-necesarias-5
+preparación-de-los-datos
+nube-de-letras
 introducción-1
 anotaciones
 ejes
