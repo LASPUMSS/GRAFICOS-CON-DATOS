@@ -1,6 +1,7 @@
 tab:unnamed-chunk-44
 introducción
 conceptos
+modelo
 variable
 grafico-de-disperción
 librerias-necesarias

@@ -24,6 +24,7 @@ Se presentan los gráficos más usados en el análisis de datos, como ser:
 - Gráficos de líneas.
 - Histogramas.
 - Gráficos de cajas.
+- Nube de palabras
 
 ```{r include=FALSE}
 knitr::opts_chunk$set(echo = TRUE,

@@ -5,6 +5,9 @@ Los graficos en el proceso de analisis de datos, son el primer acercamiento con 
 
 ## Conceptos
 
+### Modelo
+Desde el campo de las ciencias sociales, un modelo se entiende como una representación simplificada de la realidad, donde las representaciones graficas de los datos son las mas simples e intuitivas que nos pueden proporcionar los datos.
+
 ### Variable
-La idea mas general que uno puede hacer al pensar en una variable, es asociarla con algo que **cambia**
+La idea mas general que uno puede hacer al pensar en una variable, es asociarla con algo que **cambia**.
 
