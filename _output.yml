@@ -5,9 +5,9 @@ bookdown::gitbook:
     toc:
       collapse: section
       before: |
-        <li><a href="./"><b>GRAFICOS CON DATOS</b></a></li>
+        <li><a href="./"><strong>GRAFICOS CON DATOS</b></strong></li>
       after: |
-        <li><a href="https://github.com/LASPUMSS/GRAFICOS-CON-DATOS" target="blank">Publicado en GitHub Pages</a></li>
+        <li><strong><a href="https://github.com/LASPUMSS/GRAFICOS-CON-DATOS" target="blank">Publicado en GitHub Pages</a></strong></li>
     edit: null
     search:
       engine: lunr # or fuse
