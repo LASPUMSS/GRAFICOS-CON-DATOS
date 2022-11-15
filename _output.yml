@@ -1,7 +1,9 @@
 bookdown::gitbook:
+  toc_depth: 3
   css: style.css
   config:
     toc:
+      collapse: section
       before: |
         <li><a href="./"><b>GRAFICOS CON DATOS</b></a></li>
       after: |
