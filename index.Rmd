@@ -9,8 +9,7 @@ bibliography: [book.bib, packages.bib]
 # cover-image: path to the social sharing image like images/cover.jpg
 description: |
   Este libro electrónico esta desarrollado bajo la tecnología bookdown, 
-  donde desarrollamos los principales o gráficos 
-  mas utilizados en el análisis de datos.
+  donde desarrollamos los principales gráficos mas utilizados en el análisis de datos.
 link-citations: yes
 github-repo: LASPUMSS/GRAFICOS-CON-DATOS
 ---
