@@ -248,16 +248,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="anotaciones" class="section level1 hasAnchor" number="9">
 <h1><span class="header-section-number">Capítulo 9</span> Anotaciones<a href="anotaciones.html#anotaciones" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Las anotaciones nos permiten dar mas información a los usuarios de grafico, esto es subjetivo, deacuerdo a la audiencia a la que esta dirigida los grafico.</p>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="anotaciones.html#cb27-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb27-2"><a href="anotaciones.html#cb27-2" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
-<span id="cb27-3"><a href="anotaciones.html#cb27-3" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb27-4"><a href="anotaciones.html#cb27-4" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="anotaciones.html#cb28-1" tabindex="-1"></a>p <span class="ot">&lt;-</span> cars <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>speed, <span class="at">y=</span>dist)) <span class="sc">+</span></span>
-<span id="cb28-2"><a href="anotaciones.html#cb28-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
-<span id="cb28-3"><a href="anotaciones.html#cb28-3" tabindex="-1"></a></span>
-<span id="cb28-4"><a href="anotaciones.html#cb28-4" tabindex="-1"></a>p <span class="sc">+</span></span>
-<span id="cb28-5"><a href="anotaciones.html#cb28-5" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">10</span>, <span class="at">y =</span> <span class="dv">50</span>, <span class="at">label =</span> <span class="st">&quot;Grupo 1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb28-6"><a href="anotaciones.html#cb28-6" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">23</span>, <span class="at">y =</span> <span class="dv">100</span>, <span class="at">label =</span> <span class="st">&quot;Grupo 2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="anotaciones.html#cb26-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb26-2"><a href="anotaciones.html#cb26-2" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb26-3"><a href="anotaciones.html#cb26-3" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb26-4"><a href="anotaciones.html#cb26-4" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="anotaciones.html#cb27-1" tabindex="-1"></a>p <span class="ot">&lt;-</span> cars <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>speed, <span class="at">y=</span>dist)) <span class="sc">+</span></span>
+<span id="cb27-2"><a href="anotaciones.html#cb27-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb27-3"><a href="anotaciones.html#cb27-3" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="anotaciones.html#cb27-4" tabindex="-1"></a>p <span class="sc">+</span></span>
+<span id="cb27-5"><a href="anotaciones.html#cb27-5" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">10</span>, <span class="at">y =</span> <span class="dv">50</span>, <span class="at">label =</span> <span class="st">&quot;Grupo 1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb27-6"><a href="anotaciones.html#cb27-6" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">23</span>, <span class="at">y =</span> <span class="dv">100</span>, <span class="at">label =</span> <span class="st">&quot;Grupo 2&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-26-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 
 </div>

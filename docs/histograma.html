@@ -250,27 +250,27 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Los histogramas se los utiliza comúnmente para visualizar la forma en se distribuyen los datos.</p>
 <div id="librerias-necesarias-3" class="section level2 hasAnchor" number="5.1">
 <h2><span class="header-section-number">5.1</span> Librerias necesarias<a href="histograma.html#librerias-necesarias-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="histograma.html#cb14-1" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
-<span id="cb14-2"><a href="histograma.html#cb14-2" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb14-3"><a href="histograma.html#cb14-3" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb14-4"><a href="histograma.html#cb14-4" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="histograma.html#cb15-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb15-2"><a href="histograma.html#cb15-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="histograma.html#cb13-1" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb13-2"><a href="histograma.html#cb13-2" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb13-3"><a href="histograma.html#cb13-3" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb13-4"><a href="histograma.html#cb13-4" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="histograma.html#cb14-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb14-2"><a href="histograma.html#cb14-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
 </div>
 <div id="histograma-en-r" class="section level2 hasAnchor" number="5.2">
 <h2><span class="header-section-number">5.2</span> Histograma en R<a href="histograma.html#histograma-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="histograma.html#cb16-1" tabindex="-1"></a>cars <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>dist)) <span class="sc">+</span> </span>
-<span id="cb16-2"><a href="histograma.html#cb16-2" tabindex="-1"></a>    <span class="fu">geom_histogram</span>()</span></code></pre></div>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="histograma.html#cb15-1" tabindex="-1"></a>cars <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>dist)) <span class="sc">+</span> </span>
+<span id="cb15-2"><a href="histograma.html#cb15-2" tabindex="-1"></a>    <span class="fu">geom_histogram</span>()</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-16-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 </div>
 <div id="hisograma-en-python" class="section level2 hasAnchor" number="5.3">
 <h2><span class="header-section-number">5.3</span> Hisograma en Python<a href="histograma.html#hisograma-en-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="histograma.html#cb17-1" tabindex="-1"></a>plt.clf()</span>
-<span id="cb17-2"><a href="histograma.html#cb17-2" tabindex="-1"></a></span>
-<span id="cb17-3"><a href="histograma.html#cb17-3" tabindex="-1"></a>x<span class="op">=</span>np.array(r.cars[<span class="st">&quot;dist&quot;</span>])</span>
-<span id="cb17-4"><a href="histograma.html#cb17-4" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="histograma.html#cb17-5" tabindex="-1"></a>plt.hist(x)</span>
-<span id="cb17-6"><a href="histograma.html#cb17-6" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="histograma.html#cb16-1" tabindex="-1"></a>plt.clf()</span>
+<span id="cb16-2"><a href="histograma.html#cb16-2" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="histograma.html#cb16-3" tabindex="-1"></a>x<span class="op">=</span>np.array(r.cars[<span class="st">&quot;dist&quot;</span>])</span>
+<span id="cb16-4"><a href="histograma.html#cb16-4" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="histograma.html#cb16-5" tabindex="-1"></a>plt.hist(x)</span>
+<span id="cb16-6"><a href="histograma.html#cb16-6" tabindex="-1"></a>plt.show()</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-17-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 
 </div>
