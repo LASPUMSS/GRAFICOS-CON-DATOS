@@ -7,7 +7,7 @@
   <title>Capítulo 12 Leyendas | GRAFICOS CON DATOS</title>
   <meta name="description" content="<p>Este libro electrónico esta desarrollado bajo la tecnología bookdown,
 donde desarrollamos los principales gráficos mas utilizados en el análisis de datos.</p>" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 12 Leyendas | GRAFICOS CON DATOS" />
   <meta property="og:type" content="book" />
@@ -26,7 +26,7 @@ donde desarrollamos los principales gráficos mas utilizados en el análisis de 
 <meta name="author" content="Luis Alberto Solis Peña" />
 
 
-<meta name="date" content="2022-11-18" />
+<meta name="date" content="2024-04-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -123,6 +123,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -243,16 +247,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="leyendas" class="section level1 hasAnchor" number="12">
 <h1><span class="header-section-number">Capítulo 12</span> Leyendas<a href="leyendas.html#leyendas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="sourceCode" id="cb41"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb41-1"><a href="leyendas.html#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb41-2"><a href="leyendas.html#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
-<span id="cb41-3"><a href="leyendas.html#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb41-4"><a href="leyendas.html#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
-<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb42-1"><a href="leyendas.html#cb42-1" aria-hidden="true" tabindex="-1"></a>pg_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(CO2, <span class="fu">aes</span>(<span class="at">x =</span> conc, <span class="at">y =</span> uptake, <span class="at">fill =</span> Plant)) <span class="sc">+</span></span>
-<span id="cb42-2"><a href="leyendas.html#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb42-3"><a href="leyendas.html#cb42-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Pastel2&quot;</span>)</span>
-<span id="cb42-4"><a href="leyendas.html#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb42-5"><a href="leyendas.html#cb42-5" aria-hidden="true" tabindex="-1"></a>pg_plot <span class="sc">+</span></span>
-<span id="cb42-6"><a href="leyendas.html#cb42-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;top&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb38-1"><a href="leyendas.html#cb38-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb38-2"><a href="leyendas.html#cb38-2" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb38-3"><a href="leyendas.html#cb38-3" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb38-4"><a href="leyendas.html#cb38-4" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb39"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb39-1"><a href="leyendas.html#cb39-1" tabindex="-1"></a>pg_plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(CO2, <span class="fu">aes</span>(<span class="at">x =</span> conc, <span class="at">y =</span> uptake, <span class="at">fill =</span> Plant)) <span class="sc">+</span></span>
+<span id="cb39-2"><a href="leyendas.html#cb39-2" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb39-3"><a href="leyendas.html#cb39-3" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">&quot;Pastel2&quot;</span>)</span>
+<span id="cb39-4"><a href="leyendas.html#cb39-4" tabindex="-1"></a></span>
+<span id="cb39-5"><a href="leyendas.html#cb39-5" tabindex="-1"></a>pg_plot <span class="sc">+</span></span>
+<span id="cb39-6"><a href="leyendas.html#cb39-6" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">&quot;top&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-36-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 
 </div>

@@ -1,5 +1,6 @@
 # Grafico de disperción 
-El grafico de diesperión, nos permite representar la relación entre dos variables continuas.
+
+El gráfico de dispersión, nos permite representar la relación entre dos variables continuas.
 
 ## Librerias necesarias
 

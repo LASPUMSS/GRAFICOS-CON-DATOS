@@ -7,7 +7,7 @@
   <title>Capítulo 9 Anotaciones | GRAFICOS CON DATOS</title>
   <meta name="description" content="<p>Este libro electrónico esta desarrollado bajo la tecnología bookdown,
 donde desarrollamos los principales gráficos mas utilizados en el análisis de datos.</p>" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 9 Anotaciones | GRAFICOS CON DATOS" />
   <meta property="og:type" content="book" />
@@ -26,7 +26,7 @@ donde desarrollamos los principales gráficos mas utilizados en el análisis de 
 <meta name="author" content="Luis Alberto Solis Peña" />
 
 
-<meta name="date" content="2022-11-18" />
+<meta name="date" content="2024-04-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -123,6 +123,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -244,16 +248,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="anotaciones" class="section level1 hasAnchor" number="9">
 <h1><span class="header-section-number">Capítulo 9</span> Anotaciones<a href="anotaciones.html#anotaciones" class="anchor-section" aria-label="Anchor link to header"></a></h1>
 <p>Las anotaciones nos permiten dar mas información a los usuarios de grafico, esto es subjetivo, deacuerdo a la audiencia a la que esta dirigida los grafico.</p>
-<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="anotaciones.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb30-2"><a href="anotaciones.html#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
-<span id="cb30-3"><a href="anotaciones.html#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb30-4"><a href="anotaciones.html#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
-<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="anotaciones.html#cb31-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> cars <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>speed, <span class="at">y=</span>dist)) <span class="sc">+</span></span>
-<span id="cb31-2"><a href="anotaciones.html#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
-<span id="cb31-3"><a href="anotaciones.html#cb31-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-4"><a href="anotaciones.html#cb31-4" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span></span>
-<span id="cb31-5"><a href="anotaciones.html#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">10</span>, <span class="at">y =</span> <span class="dv">50</span>, <span class="at">label =</span> <span class="st">&quot;Grupo 1&quot;</span>) <span class="sc">+</span></span>
-<span id="cb31-6"><a href="anotaciones.html#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">23</span>, <span class="at">y =</span> <span class="dv">100</span>, <span class="at">label =</span> <span class="st">&quot;Grupo 2&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="anotaciones.html#cb27-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb27-2"><a href="anotaciones.html#cb27-2" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb27-3"><a href="anotaciones.html#cb27-3" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb27-4"><a href="anotaciones.html#cb27-4" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="anotaciones.html#cb28-1" tabindex="-1"></a>p <span class="ot">&lt;-</span> cars <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>speed, <span class="at">y=</span>dist)) <span class="sc">+</span></span>
+<span id="cb28-2"><a href="anotaciones.html#cb28-2" tabindex="-1"></a>  <span class="fu">geom_point</span>()</span>
+<span id="cb28-3"><a href="anotaciones.html#cb28-3" tabindex="-1"></a></span>
+<span id="cb28-4"><a href="anotaciones.html#cb28-4" tabindex="-1"></a>p <span class="sc">+</span></span>
+<span id="cb28-5"><a href="anotaciones.html#cb28-5" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">10</span>, <span class="at">y =</span> <span class="dv">50</span>, <span class="at">label =</span> <span class="st">&quot;Grupo 1&quot;</span>) <span class="sc">+</span></span>
+<span id="cb28-6"><a href="anotaciones.html#cb28-6" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="dv">23</span>, <span class="at">y =</span> <span class="dv">100</span>, <span class="at">label =</span> <span class="st">&quot;Grupo 2&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-26-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 
 </div>

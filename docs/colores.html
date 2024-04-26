@@ -7,7 +7,7 @@
   <title>Capítulo 14 Colores | GRAFICOS CON DATOS</title>
   <meta name="description" content="<p>Este libro electrónico esta desarrollado bajo la tecnología bookdown,
 donde desarrollamos los principales gráficos mas utilizados en el análisis de datos.</p>" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 14 Colores | GRAFICOS CON DATOS" />
   <meta property="og:type" content="book" />
@@ -26,7 +26,7 @@ donde desarrollamos los principales gráficos mas utilizados en el análisis de 
 <meta name="author" content="Luis Alberto Solis Peña" />
 
 
-<meta name="date" content="2022-11-18" />
+<meta name="date" content="2024-04-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -123,6 +123,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -243,15 +247,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="colores" class="section level1 hasAnchor" number="14">
 <h1><span class="header-section-number">Capítulo 14</span> Colores<a href="colores.html#colores" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="sourceCode" id="cb48"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb48-1"><a href="colores.html#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb48-2"><a href="colores.html#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
-<span id="cb48-3"><a href="colores.html#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb48-4"><a href="colores.html#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
-<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb49-1"><a href="colores.html#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(cars, <span class="fu">aes</span>(<span class="at">x =</span> dist)) <span class="sc">+</span></span>
-<span id="cb49-2"><a href="colores.html#cb49-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="colores.html#cb45-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb45-2"><a href="colores.html#cb45-2" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb45-3"><a href="colores.html#cb45-3" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb45-4"><a href="colores.html#cb45-4" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="colores.html#cb46-1" tabindex="-1"></a><span class="fu">ggplot</span>(cars, <span class="fu">aes</span>(<span class="at">x =</span> dist)) <span class="sc">+</span></span>
+<span id="cb46-2"><a href="colores.html#cb46-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-43-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb50"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb50-1"><a href="colores.html#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(cars, <span class="fu">aes</span>(<span class="at">x =</span> speed, <span class="at">y =</span> dist)) <span class="sc">+</span></span>
-<span id="cb50-2"><a href="colores.html#cb50-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">colour =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb47-1"><a href="colores.html#cb47-1" tabindex="-1"></a><span class="fu">ggplot</span>(cars, <span class="fu">aes</span>(<span class="at">x =</span> speed, <span class="at">y =</span> dist)) <span class="sc">+</span></span>
+<span id="cb47-2"><a href="colores.html#cb47-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">colour =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-43-2.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 
 </div>

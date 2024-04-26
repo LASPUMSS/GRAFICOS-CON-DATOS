@@ -7,7 +7,7 @@
   <title>Capítulo 7 Nube de palabras | GRAFICOS CON DATOS</title>
   <meta name="description" content="<p>Este libro electrónico esta desarrollado bajo la tecnología bookdown,
 donde desarrollamos los principales gráficos mas utilizados en el análisis de datos.</p>" />
-  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Capítulo 7 Nube de palabras | GRAFICOS CON DATOS" />
   <meta property="og:type" content="book" />
@@ -26,7 +26,7 @@ donde desarrollamos los principales gráficos mas utilizados en el análisis de 
 <meta name="author" content="Luis Alberto Solis Peña" />
 
 
-<meta name="date" content="2022-11-18" />
+<meta name="date" content="2024-04-26" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -123,6 +123,10 @@ code span.vs { color: #4070a0; } /* VerbatimString */
 code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
 
 <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
@@ -246,29 +250,29 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Las nubes de palabras nos permiten visualizar la frecuencia con la que se repite, para poder graficar este tipo de gráficos se necesita dos variables, una que representa las “palabras” y la otra variable que representa su “frecuencia”. Dentro del análisis de datos con R existen paquetes que guardan este tipo de datos.</p>
 <div id="librerias-necesarias-5" class="section level2 hasAnchor" number="7.1">
 <h2><span class="header-section-number">7.1</span> Librerias necesarias<a href="nube-de-palabras.html#librerias-necesarias-5" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="nube-de-palabras.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(janeaustenr)</span>
-<span id="cb27-2"><a href="nube-de-palabras.html#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidytext)</span>
-<span id="cb27-3"><a href="nube-de-palabras.html#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
-<span id="cb27-4"><a href="nube-de-palabras.html#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
-<span id="cb27-5"><a href="nube-de-palabras.html#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(wordcloud)</span></code></pre></div>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="nube-de-palabras.html#cb24-1" tabindex="-1"></a><span class="fu">library</span>(janeaustenr)</span>
+<span id="cb24-2"><a href="nube-de-palabras.html#cb24-2" tabindex="-1"></a><span class="fu">library</span>(tidytext)</span>
+<span id="cb24-3"><a href="nube-de-palabras.html#cb24-3" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb24-4"><a href="nube-de-palabras.html#cb24-4" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb24-5"><a href="nube-de-palabras.html#cb24-5" tabindex="-1"></a><span class="fu">library</span>(wordcloud)</span></code></pre></div>
 </div>
 <div id="preparación-de-los-datos" class="section level2 hasAnchor" number="7.2">
 <h2><span class="header-section-number">7.2</span> Preparación de los datos<a href="nube-de-palabras.html#preparación-de-los-datos" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="nube-de-palabras.html#cb28-1" aria-hidden="true" tabindex="-1"></a>books <span class="ot">&lt;-</span> <span class="fu">austen_books</span>() <span class="sc">%&gt;%</span></span>
-<span id="cb28-2"><a href="nube-de-palabras.html#cb28-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(book) <span class="sc">%&gt;%</span></span>
-<span id="cb28-3"><a href="nube-de-palabras.html#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">linenumber =</span> <span class="fu">row_number</span>(),</span>
-<span id="cb28-4"><a href="nube-de-palabras.html#cb28-4" aria-hidden="true" tabindex="-1"></a>           <span class="at">chapter =</span> <span class="fu">cumsum</span>(<span class="fu">str_detect</span>(text,<span class="fu">regex</span>(<span class="st">&quot;^chapter [</span><span class="sc">\\</span><span class="st">divxlc]&quot;</span>,<span class="at">ignore_case =</span><span class="cn">TRUE</span>)))) <span class="sc">%&gt;%</span></span>
-<span id="cb28-5"><a href="nube-de-palabras.html#cb28-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ungroup</span>()</span>
-<span id="cb28-6"><a href="nube-de-palabras.html#cb28-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb28-7"><a href="nube-de-palabras.html#cb28-7" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;stop_words&quot;</span>)</span>
-<span id="cb28-8"><a href="nube-de-palabras.html#cb28-8" aria-hidden="true" tabindex="-1"></a>books_words <span class="ot">&lt;-</span> books <span class="sc">%&gt;%</span></span>
-<span id="cb28-9"><a href="nube-de-palabras.html#cb28-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">unnest_tokens</span>(word, text) <span class="sc">%&gt;%</span> <span class="fu">anti_join</span>(stop_words)</span></code></pre></div>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="nube-de-palabras.html#cb25-1" tabindex="-1"></a>books <span class="ot">&lt;-</span> <span class="fu">austen_books</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb25-2"><a href="nube-de-palabras.html#cb25-2" tabindex="-1"></a>    <span class="fu">group_by</span>(book) <span class="sc">%&gt;%</span></span>
+<span id="cb25-3"><a href="nube-de-palabras.html#cb25-3" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">linenumber =</span> <span class="fu">row_number</span>(),</span>
+<span id="cb25-4"><a href="nube-de-palabras.html#cb25-4" tabindex="-1"></a>           <span class="at">chapter =</span> <span class="fu">cumsum</span>(<span class="fu">str_detect</span>(text,<span class="fu">regex</span>(<span class="st">&quot;^chapter [</span><span class="sc">\\</span><span class="st">divxlc]&quot;</span>,<span class="at">ignore_case =</span><span class="cn">TRUE</span>)))) <span class="sc">%&gt;%</span></span>
+<span id="cb25-5"><a href="nube-de-palabras.html#cb25-5" tabindex="-1"></a>    <span class="fu">ungroup</span>()</span>
+<span id="cb25-6"><a href="nube-de-palabras.html#cb25-6" tabindex="-1"></a></span>
+<span id="cb25-7"><a href="nube-de-palabras.html#cb25-7" tabindex="-1"></a><span class="fu">data</span>(<span class="st">&quot;stop_words&quot;</span>)</span>
+<span id="cb25-8"><a href="nube-de-palabras.html#cb25-8" tabindex="-1"></a>books_words <span class="ot">&lt;-</span> books <span class="sc">%&gt;%</span></span>
+<span id="cb25-9"><a href="nube-de-palabras.html#cb25-9" tabindex="-1"></a>    <span class="fu">unnest_tokens</span>(word, text) <span class="sc">%&gt;%</span> <span class="fu">anti_join</span>(stop_words)</span></code></pre></div>
 </div>
 <div id="nube-de-letras" class="section level2 hasAnchor" number="7.3">
 <h2><span class="header-section-number">7.3</span> Nube de letras<a href="nube-de-palabras.html#nube-de-letras" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="nube-de-palabras.html#cb29-1" aria-hidden="true" tabindex="-1"></a>books_words <span class="sc">%&gt;%</span></span>
-<span id="cb29-2"><a href="nube-de-palabras.html#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(word, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
-<span id="cb29-3"><a href="nube-de-palabras.html#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">with</span>(<span class="fu">wordcloud</span>(word, n, <span class="at">max.words =</span> <span class="dv">100</span>))</span></code></pre></div>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="nube-de-palabras.html#cb26-1" tabindex="-1"></a>books_words <span class="sc">%&gt;%</span></span>
+<span id="cb26-2"><a href="nube-de-palabras.html#cb26-2" tabindex="-1"></a>  <span class="fu">count</span>(word, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb26-3"><a href="nube-de-palabras.html#cb26-3" tabindex="-1"></a>  <span class="fu">with</span>(<span class="fu">wordcloud</span>(word, n, <span class="at">max.words =</span> <span class="dv">100</span>))</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-24-1.png" width="80%" height="80%" style="display: block; margin: auto;" /></p>
 
 </div>
