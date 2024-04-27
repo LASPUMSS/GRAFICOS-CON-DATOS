@@ -27,7 +27,7 @@ cars %>% ggplot(aes(y=dist)) +
 
 ## Grafico de caja en Python
 
-```{python}
+```{python, results='hide'}
 plt.clf()
 
 x=np.array(r.cars["dist"])

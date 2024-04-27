@@ -3,10 +3,10 @@ introducción
 conceptos
 modelo
 variable
-grafico-de-disperción
+grafico-de-dispersión
 librerias-necesarias
-grafico-de-dispercion-con-r
-grafico-de-disperción-con-python
+grafico-de-dispersión-con-r
+grafico-de-dispersión-con-python
 grafico-de-barras
 librerias-necesarias-1
 grafico-de-barras-con-r

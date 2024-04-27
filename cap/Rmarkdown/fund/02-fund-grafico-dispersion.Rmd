@@ -1,4 +1,4 @@
-# Grafico de disperción 
+# Grafico de dispersión 
 
 El gráfico de dispersión, nos permite representar la relación entre dos variables continuas.
 
@@ -15,14 +15,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 ```
 
-## Grafico de dispercion con R
+## Grafico de dispersión con R
 
 ```{r, out.width="50%", out.height="50%", fig.align='center'}
 cars %>% ggplot(aes(x=speed,y=dist)) + geom_point()
 
 ```
 
-## Grafico de disperción con Python
+## Grafico de dispersión con Python
 
 ```{python, out.width="50%", out.height="50%", fig.align='center'}
 plt.clf()

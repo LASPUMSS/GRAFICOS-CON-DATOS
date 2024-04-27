@@ -1,4 +1,4 @@
-# (PART) PERSONALIZACIONES {-}
+# (PART) PERSONALIZACIONES CON R{-}
 
 # Introducción
 Si bien ya sabemos como generar un grafico, es hora de ver los destalles que puede hacer mas informativo de un grafico, como agregar facetas, y otros que hacen mas **informativo** a un grafico.

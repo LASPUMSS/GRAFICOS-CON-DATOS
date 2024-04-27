@@ -4,12 +4,12 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Capítulo 4 Grafico De Lineas | GRAFICOS CON DATOS</title>
+  <title>Capítulo 2 Grafico de dispersión | GRAFICOS CON DATOS</title>
   <meta name="description" content="<p>Este libro electrónico esta desarrollado bajo la tecnología bookdown,
 donde desarrollamos los principales gráficos mas utilizados en el análisis de datos.</p>" />
   <meta name="generator" content="bookdown 0.39 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Capítulo 4 Grafico De Lineas | GRAFICOS CON DATOS" />
+  <meta property="og:title" content="Capítulo 2 Grafico de dispersión | GRAFICOS CON DATOS" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="<p>Este libro electrónico esta desarrollado bajo la tecnología bookdown,
@@ -17,7 +17,7 @@ donde desarrollamos los principales gráficos mas utilizados en el análisis de 
   <meta name="github-repo" content="LASPUMSS/GRAFICOS-CON-DATOS" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Capítulo 4 Grafico De Lineas | GRAFICOS CON DATOS" />
+  <meta name="twitter:title" content="Capítulo 2 Grafico de dispersión | GRAFICOS CON DATOS" />
   
   <meta name="twitter:description" content="<p>Este libro electrónico esta desarrollado bajo la tecnología bookdown,
 donde desarrollamos los principales gráficos mas utilizados en el análisis de datos.</p>" />
@@ -33,8 +33,8 @@ donde desarrollamos los principales gráficos mas utilizados en el análisis de 
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="grafico-de-barras.html"/>
-<link rel="next" href="histograma.html"/>
+<link rel="prev" href="introducción.html"/>
+<link rel="next" href="grafico-de-barras.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -245,33 +245,31 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="grafico-de-lineas" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Capítulo 4</span> Grafico De Lineas<a href="grafico-de-lineas.html#grafico-de-lineas" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Los graficos de lineas nos permiten ver la evolución de una variable atravez del tiempo que es como generalmente se lo utilizar el grafico de lineas.</p>
-<div id="librerias-necesarias-2" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Librerias necesarias<a href="grafico-de-lineas.html#librerias-necesarias-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="grafico-de-lineas.html#cb9-1" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
-<span id="cb9-2"><a href="grafico-de-lineas.html#cb9-2" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb9-3"><a href="grafico-de-lineas.html#cb9-3" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb9-4"><a href="grafico-de-lineas.html#cb9-4" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
-<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="grafico-de-lineas.html#cb10-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb10-2"><a href="grafico-de-lineas.html#cb10-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
+<div id="grafico-de-dispersión" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Capítulo 2</span> Grafico de dispersión<a href="grafico-de-dispersión.html#grafico-de-dispersión" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>El gráfico de dispersión, nos permite representar la relación entre dos variables continuas.</p>
+<div id="librerias-necesarias" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Librerias necesarias<a href="grafico-de-dispersión.html#librerias-necesarias" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="grafico-de-dispersión.html#cb1-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb1-2"><a href="grafico-de-dispersión.html#cb1-2" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-3"><a href="grafico-de-dispersión.html#cb1-3" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="grafico-de-dispersión.html#cb2-1" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb2-2"><a href="grafico-de-dispersión.html#cb2-2" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span></code></pre></div>
 </div>
-<div id="grafico-de-lineas-en-r" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Grafico de lineas en R<a href="grafico-de-lineas.html#grafico-de-lineas-en-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb11"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb11-1"><a href="grafico-de-lineas.html#cb11-1" tabindex="-1"></a>BOD <span class="sc">%&gt;%</span>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>Time, <span class="at">y=</span>demand)) <span class="sc">+</span> </span>
-<span id="cb11-2"><a href="grafico-de-lineas.html#cb11-2" tabindex="-1"></a>    <span class="fu">geom_line</span>()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-12-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<div id="grafico-de-dispersión-con-r" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Grafico de dispersión con R<a href="grafico-de-dispersión.html#grafico-de-dispersión-con-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="grafico-de-dispersión.html#cb3-1" tabindex="-1"></a>cars <span class="sc">%&gt;%</span> <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>speed,<span class="at">y=</span>dist)) <span class="sc">+</span> <span class="fu">geom_point</span>()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-4-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 </div>
-<div id="grafico-de-lineas-en-python" class="section level2 hasAnchor" number="4.3">
-<h2><span class="header-section-number">4.3</span> Grafico de lineas en Python<a href="grafico-de-lineas.html#grafico-de-lineas-en-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="grafico-de-lineas.html#cb12-1" tabindex="-1"></a>plt.clf()</span>
-<span id="cb12-2"><a href="grafico-de-lineas.html#cb12-2" tabindex="-1"></a>x<span class="op">=</span>np.array(r.BOD[<span class="st">&quot;Time&quot;</span>])</span>
-<span id="cb12-3"><a href="grafico-de-lineas.html#cb12-3" tabindex="-1"></a>y<span class="op">=</span>np.array(r.BOD[<span class="st">&quot;demand&quot;</span>])</span>
-<span id="cb12-4"><a href="grafico-de-lineas.html#cb12-4" tabindex="-1"></a></span>
-<span id="cb12-5"><a href="grafico-de-lineas.html#cb12-5" tabindex="-1"></a>plt.plot(x,y)</span>
-<span id="cb12-6"><a href="grafico-de-lineas.html#cb12-6" tabindex="-1"></a>plt.show()</span></code></pre></div>
-<p><img src="_main_files/figure-html/unnamed-chunk-13-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
+<div id="grafico-de-dispersión-con-python" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Grafico de dispersión con Python<a href="grafico-de-dispersión.html#grafico-de-dispersión-con-python" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="grafico-de-dispersión.html#cb4-1" tabindex="-1"></a>plt.clf()</span>
+<span id="cb4-2"><a href="grafico-de-dispersión.html#cb4-2" tabindex="-1"></a>x<span class="op">=</span>np.array(r.cars[<span class="st">&quot;speed&quot;</span>])</span>
+<span id="cb4-3"><a href="grafico-de-dispersión.html#cb4-3" tabindex="-1"></a>y<span class="op">=</span>np.array(r.cars[<span class="st">&quot;dist&quot;</span>])</span>
+<span id="cb4-4"><a href="grafico-de-dispersión.html#cb4-4" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="grafico-de-dispersión.html#cb4-5" tabindex="-1"></a>plt.scatter(x,y)</span>
+<span id="cb4-6"><a href="grafico-de-dispersión.html#cb4-6" tabindex="-1"></a>plt.show()</span></code></pre></div>
+<p><img src="_main_files/figure-html/unnamed-chunk-5-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 
 </div>
 </div>
@@ -280,8 +278,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="grafico-de-barras.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="histograma.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introducción.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="grafico-de-barras.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

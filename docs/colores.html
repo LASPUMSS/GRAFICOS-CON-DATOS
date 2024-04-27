@@ -154,11 +154,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="1.1.2" data-path="introducción.html"><a href="introducción.html#variable"><i class="fa fa-check"></i><b>1.1.2</b> Variable</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="grafico-de-disperción.html"><a href="grafico-de-disperción.html"><i class="fa fa-check"></i><b>2</b> Grafico de disperción</a>
+<li class="chapter" data-level="2" data-path="grafico-de-dispersión.html"><a href="grafico-de-dispersión.html"><i class="fa fa-check"></i><b>2</b> Grafico de dispersión</a>
 <ul>
-<li class="chapter" data-level="2.1" data-path="grafico-de-disperción.html"><a href="grafico-de-disperción.html#librerias-necesarias"><i class="fa fa-check"></i><b>2.1</b> Librerias necesarias</a></li>
-<li class="chapter" data-level="2.2" data-path="grafico-de-disperción.html"><a href="grafico-de-disperción.html#grafico-de-dispercion-con-r"><i class="fa fa-check"></i><b>2.2</b> Grafico de dispercion con R</a></li>
-<li class="chapter" data-level="2.3" data-path="grafico-de-disperción.html"><a href="grafico-de-disperción.html#grafico-de-disperción-con-python"><i class="fa fa-check"></i><b>2.3</b> Grafico de disperción con Python</a></li>
+<li class="chapter" data-level="2.1" data-path="grafico-de-dispersión.html"><a href="grafico-de-dispersión.html#librerias-necesarias"><i class="fa fa-check"></i><b>2.1</b> Librerias necesarias</a></li>
+<li class="chapter" data-level="2.2" data-path="grafico-de-dispersión.html"><a href="grafico-de-dispersión.html#grafico-de-dispersión-con-r"><i class="fa fa-check"></i><b>2.2</b> Grafico de dispersión con R</a></li>
+<li class="chapter" data-level="2.3" data-path="grafico-de-dispersión.html"><a href="grafico-de-dispersión.html#grafico-de-dispersión-con-python"><i class="fa fa-check"></i><b>2.3</b> Grafico de dispersión con Python</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="grafico-de-barras.html"><a href="grafico-de-barras.html"><i class="fa fa-check"></i><b>3</b> Grafico De Barras</a>
 <ul>
@@ -190,7 +190,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="7.2" data-path="nube-de-palabras.html"><a href="nube-de-palabras.html#preparación-de-los-datos"><i class="fa fa-check"></i><b>7.2</b> Preparación de los datos</a></li>
 <li class="chapter" data-level="7.3" data-path="nube-de-palabras.html"><a href="nube-de-palabras.html#nube-de-letras"><i class="fa fa-check"></i><b>7.3</b> Nube de letras</a></li>
 </ul></li>
-<li class="part"><span><b>II PERSONALIZACIONES</b></span></li>
+<li class="part"><span><b>II PERSONALIZACIONES CON R</b></span></li>
 <li class="chapter" data-level="8" data-path="introducción-1.html"><a href="introducción-1.html"><i class="fa fa-check"></i><b>8</b> Introducción</a></li>
 <li class="chapter" data-level="9" data-path="anotaciones.html"><a href="anotaciones.html"><i class="fa fa-check"></i><b>9</b> Anotaciones</a></li>
 <li class="chapter" data-level="10" data-path="ejes.html"><a href="ejes.html"><i class="fa fa-check"></i><b>10</b> Ejes</a></li>
@@ -247,15 +247,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="colores" class="section level1 hasAnchor" number="14">
 <h1><span class="header-section-number">Capítulo 14</span> Colores<a href="colores.html#colores" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="colores.html#cb44-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
-<span id="cb44-2"><a href="colores.html#cb44-2" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
-<span id="cb44-3"><a href="colores.html#cb44-3" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb44-4"><a href="colores.html#cb44-4" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
-<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="colores.html#cb45-1" tabindex="-1"></a><span class="fu">ggplot</span>(cars, <span class="fu">aes</span>(<span class="at">x =</span> dist)) <span class="sc">+</span></span>
-<span id="cb45-2"><a href="colores.html#cb45-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb43-1"><a href="colores.html#cb43-1" tabindex="-1"></a><span class="fu">library</span>(reticulate)</span>
+<span id="cb43-2"><a href="colores.html#cb43-2" tabindex="-1"></a><span class="fu">library</span>(gcookbook)</span>
+<span id="cb43-3"><a href="colores.html#cb43-3" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb43-4"><a href="colores.html#cb43-4" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code></pre></div>
+<div class="sourceCode" id="cb44"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb44-1"><a href="colores.html#cb44-1" tabindex="-1"></a><span class="fu">ggplot</span>(cars, <span class="fu">aes</span>(<span class="at">x =</span> dist)) <span class="sc">+</span></span>
+<span id="cb44-2"><a href="colores.html#cb44-2" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">fill =</span> <span class="st">&quot;red&quot;</span>, <span class="at">colour =</span> <span class="st">&quot;black&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-43-1.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
-<div class="sourceCode" id="cb46"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb46-1"><a href="colores.html#cb46-1" tabindex="-1"></a><span class="fu">ggplot</span>(cars, <span class="fu">aes</span>(<span class="at">x =</span> speed, <span class="at">y =</span> dist)) <span class="sc">+</span></span>
-<span id="cb46-2"><a href="colores.html#cb46-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">colour =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb45-1"><a href="colores.html#cb45-1" tabindex="-1"></a><span class="fu">ggplot</span>(cars, <span class="fu">aes</span>(<span class="at">x =</span> speed, <span class="at">y =</span> dist)) <span class="sc">+</span></span>
+<span id="cb45-2"><a href="colores.html#cb45-2" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">colour =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
 <p><img src="_main_files/figure-html/unnamed-chunk-43-2.png" width="50%" height="50%" style="display: block; margin: auto;" /></p>
 
 </div>
