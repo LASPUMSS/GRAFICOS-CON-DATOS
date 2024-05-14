@@ -13,7 +13,6 @@ rmd_files: ["index.Rmd",
             "cap/Rmarkdown/fund/04-fund-grafico-de-lineas.Rmd",
             "cap/Rmarkdown/fund/05-fund-histograma.Rmd",
             "cap/Rmarkdown/fund/06-fund-grafico-de-caja.Rmd",
-            "cap/Rmarkdown/fund/07-fund-nube-de-palabras.Rmd",
             
             "cap/Rmarkdown/perso/01-perso-intro.Rmd",
             "cap/Rmarkdown/perso/02-perso-anotaciones.Rmd",
