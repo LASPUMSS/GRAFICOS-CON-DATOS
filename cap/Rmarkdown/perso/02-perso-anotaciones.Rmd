@@ -1,4 +1,5 @@
-# Anotaciones
+# ANOTACIONES
+
 Las anotaciones nos permiten dar mas información a los usuarios de grafico, esto es subjetivo, deacuerdo a la audiencia a la que esta dirigida los grafico.
 
 

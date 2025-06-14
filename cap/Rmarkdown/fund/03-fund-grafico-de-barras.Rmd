@@ -1,4 +1,5 @@
-# Grafico De Barras
+# GRAFICO DE BARRAS
+
 Los graficos de barras son utilizado comunmente para representar variables discretas o cualitativas.
 
 ## Librerias necesarias

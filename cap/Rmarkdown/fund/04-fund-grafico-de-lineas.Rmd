@@ -1,4 +1,4 @@
-# Grafico De Lineas
+# GRAFICO DE LINEAS
 
 Los graficos de lineas nos permiten ver la evolución de una variable atravez del tiempo que es como generalmente se lo utilizar el grafico de lineas.
 

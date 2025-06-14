@@ -4,7 +4,7 @@ language:
   label:
     tab: 'Tabla '
   ui:
-    chapter_name: "Capítulo "
+    chapter_name: "CAPITULO "
 rmd_files: ["index.Rmd",
 
             "cap/Rmarkdown/fund/01-fund-intro.Rmd",

@@ -1,4 +1,4 @@
-# Grafico de dispersión 
+# GRAFICO DE DISPERSION
 
 El gráfico de dispersión, nos permite representar la relación entre dos variables continuas.
 

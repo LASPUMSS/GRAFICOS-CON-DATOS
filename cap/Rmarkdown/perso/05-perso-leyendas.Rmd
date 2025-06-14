@@ -1,4 +1,4 @@
-# Leyendas
+# LEYENDAS
 
 ```{r}
 library(reticulate)

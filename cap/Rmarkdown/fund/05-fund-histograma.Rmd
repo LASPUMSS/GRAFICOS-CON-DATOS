@@ -1,4 +1,5 @@
-# Histograma
+# HISTOGRAMA
+
 Los histogramas se los utiliza comúnmente para visualizar la forma en se distribuyen los datos.
 
 ## Librerias necesarias

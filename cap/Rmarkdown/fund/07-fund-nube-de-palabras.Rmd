@@ -1,4 +1,5 @@
-# Nube de palabras
+# NUBE DE PALABRAS
+
 Las nubes de palabras nos permiten visualizar la frecuencia con la que se repite, para poder graficar este tipo de gráficos se necesita dos variables, una que representa las "palabras" y  la otra variable que representa su "frecuencia". Dentro del análisis de datos con R existen paquetes que guardan este tipo de datos.
 
 ## Librerias necesarias

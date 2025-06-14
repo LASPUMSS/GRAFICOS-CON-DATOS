@@ -1,9 +1,9 @@
 tab:unnamed-chunk-41
-introducción
+introduccion
 conceptos
 modelo
 variable
-grafico-de-dispersión
+grafico-de-dispersion
 librerias-necesarias
 grafico-de-dispersión-con-r
 grafico-de-dispersión-con-python
@@ -23,7 +23,7 @@ grafico-de-caja
 librerias-necesarias-4
 grafico-de-caja-en-r
 grafico-de-caja-en-python
-introducción-1
+introduccion-1
 anotaciones
 ejes
 temas
@@ -39,7 +39,7 @@ crear-facetas-horizontales
 crear-facetas-verticales
 crear-facetas-con-doble-entrada
 colores
-introducción-2
+introducción
 coches
 descripción
 variables

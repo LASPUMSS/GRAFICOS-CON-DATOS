@@ -1,4 +1,5 @@
-# Facetas
+# FACETAS
+
 Las facetas tienen por objeto segmentar gráficos, en función de una variable categórica.
 
 ```{r}

@@ -14,7 +14,7 @@ link-citations: yes
 github-repo: LASPUMSS/GRAFICOS-CON-DATOS
 ---
 
-# Presentación {-}
+# PRESENTACION {-}
 
 Se presentan los gráficos más usados en el análisis de datos, como ser:
 
